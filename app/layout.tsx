@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Source_Serif_4, Plus_Jakarta_Sans } from "next/font/google";
-// import "./globals.css";
+import "./globals.css";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -14,6 +14,7 @@ import { Source_Serif_4, Plus_Jakarta_Sans } from "next/font/google";
 
 const sourceSerif4 = Source_Serif_4({
   variable: "--font-source-serif-4",
+  style: ['normal', 'italic'],
   subsets: ["latin"],
 });
 
