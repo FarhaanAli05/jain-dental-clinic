@@ -1,9 +1,8 @@
-import { ReactNode } from "react";
-
 interface ContainerProps {
-  children?: ReactNode;
+  children: React.ReactNode;
+  className?: string
 }
 
-export default function Container({ children }: ContainerProps) {
-  return <div className="container">{children}</div>
+export default function Container({ children, className = "" }: ContainerProps) {
+  return <div className={`container mx-auto ${className}`}>{children}</div>
 }

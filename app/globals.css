@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400..700&display=swap');
 @import "tailwindcss";
 
-/* @theme {
-  --font-sans: var(--font-plus-jakarta-sans), sans-serif;
-  --font-serif: var(--font-source-serif-4), serif;
-} */
-
 body {
   font-family: 'Source Serif 4', serif;
   font-weight: 700;
@@ -26,7 +21,7 @@ body::after {
   z-index: -1;
 }
 
-p {
+p, label, input, textarea, .send-message {
   font-family: var(--font-plus-jakarta-sans), sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -47,13 +42,21 @@ li {
 }
 
 h1 {
-  font-size: 62px;
+  font-size: 42px;
 }
 
-.container {
+h2 {
+  font-size: 32px;
+}
+
+/* .container {
   max-width: 1535px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 20px;
   height: 100%;
+} */
+
+.selected {
+  @apply bg-[#469BD1] text-white;
 }

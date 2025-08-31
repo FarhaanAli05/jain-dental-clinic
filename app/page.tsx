@@ -2,12 +2,18 @@ import Image from "next/image";
 import Container from "@/components/Container";
 import HeroSection from "@/components/HeroSection";
 import styles from "./page.module.css";
+import Link from "next/link";
+import Footer from "@/components/Footer";
+import CallToAction from "@/components/CallToAction";
+import GoogleReviews from "@/components/GoogleReviews";
+import VisitUs from "@/components/VisitUs";
+import OfficeTour from "@/components/OfficeTour";
 
 export default function Home() {
   return (
     <>
       <HeroSection
-        page="home"
+        current="home"
         backgroundImage={'/images/home-banner.webp'}
       >
         Personalized, Professional Care By <i>Experienced Dentists</i>
@@ -65,15 +71,15 @@ export default function Home() {
             <div className={styles.welcomeImageContainer}>
               <Image
                 src={"/images/home-welcome.jpg"}
-                width={443.05}
-                height={473.54}
+                width={443}
+                height={0}
                 alt=""
                 aria-hidden="true"
               />
             </div>
-            <div className={styles.welcomeCTA}>
-              <p>Call to book an appointment:</p>
-              <div>
+            <div className="mt-[20px]">
+              <p className="mb-[6px]">Call to book an appointment:</p>
+              <div className="flex items-center mt-[15px] gap-x-[25px]">
                 <Image
                   src={"/icons/phone-blue.svg"}
                   width={35}
@@ -83,7 +89,7 @@ export default function Home() {
                 />
                 <p>Brampton: 905-794-0100</p>
               </div>
-              <div>
+              <div className="flex items-center mt-[15px] gap-x-[25px]">
                 <Image
                   src={"/icons/phone-blue.svg"}
                   width={35}
@@ -96,155 +102,146 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div>
-          <Image
-            src={"/images/home-services-background.jpg"}
-            width={100}
-            height={100}
-            alt=""
-            aria-hidden="true"
-          />
-          <h3>Services</h3>
-          <h1>Comprehensive Care for Every Smile</h1>
-          <div>
-            <div>
+      </Container>
+      <div className="relative bg-[url(/images/home-services-background.jpg)] bg-no-repeat bg-cover bg-center h-240 mt-35">
+        <div className="absolute bg-gradient-to-b from-[#00162B] to-[#2C3E50] bg-no-repeat bg-center bg-cover h-full w-full opacity-60 z-10" />
+        <Container className="py-2">
+          <div className="relative z-20 text-center py-15">
+            <h3 className="px-8 py-2.5 bg-[#EBFDFF] text-center inline-block rounded-full">Services</h3>
+            <h1 className="text-white mt-2 mt-6">Comprehensive Care For <i>Every Smile</i></h1>
+            <div className="grid grid-cols-3 gap-6 text-left mt-10 [&>div]:bg-white [&>div]:h-65 [&>div]:p-7 [&>div]:rounded-[10px] [&>div>h2]:mt-3 [&>div>p]:mt-3">
               <div>
                 <Image
                   src={"/icons/preventive-care.svg"}
-                  width={55.7}
-                  height={51.82}
+                  width={56}
+                  height={0}
                   alt=""
                   aria-hidden="true"
                 />
+                <h2>Preventive Care</h2>
+                <p>
+                  Protect your smile with routine checkups, professional cleanings, and preventive treatments designed to stop dental issues before they start.
+                </p>
               </div>
-              <h2>Preventive Care</h2>
-              <p>
-                Protect your smile with routine checkups, professional cleanings, and preventive treatments designed to stop dental issues before they start.
-              </p>
-            </div>
-            <div>
-              <div>
+              <div className="bg-white">
                 <Image
                   src={"/icons/cosmetic-dentistry.svg"}
-                  width={51.82}
-                  height={51.82}
+                  width={52}
+                  height={0}
                   alt=""
                   aria-hidden="true"
                 />
+                <h2>Cosmetic Dentistry</h2>
+                <p>
+                  Enhance your confidence with personalized cosmetic treatments such as teeth whitening, veneers, and full smile makeovers.
+                </p>
               </div>
-              <h2>Cosmetic Dentistry</h2>
-              <p>
-                Enhance your confidence with personalized cosmetic treatments such as teeth whitening, veneers, and full smile makeovers.
-              </p>
-            </div>
-            <div>
               <div>
                 <Image
                   src={"/icons/root-canal-treatment.png"}
-                  width={52.91}
-                  height={52.91}
+                  width={53}
+                  height={0}
                   alt=""
                   aria-hidden="true"
                 />
+                <h2>Root Canal Treatment</h2>
+                <p>
+                  Save your natural tooth and relieve discomfort with gentle, effective root canal therapy using modern techniques.
+                </p>
               </div>
-              <h2>Root Canal Treatment</h2>
-              <p>
-                Save your natural tooth and relieve discomfort with gentle, effective root canal therapy using modern techniques.
-              </p>
-            </div>
-            <div>
               <div>
                 <Image
                   src={"/icons/braces-and-invisalign.svg"}
-                  width={38.62}
-                  height={38.62}
+                  width={39}
+                  height={0}
                   alt=""
                   aria-hidden="true"
                 />
+                <h2>Braces & Invisalign</h2>
+                <p>
+                  Achieve a straighter, healthier smile with our orthodontic solutions, including traditional braces and discreet Invisalign aligners.
+                </p>
               </div>
-              <h2>Braces & Invisalign</h2>
-              <p>
-                Protect your smile with routine checkups, professional cleanings, and preventive treatments designed to stop dental issues before they start.
-              </p>
-            </div>
-            <div>
               <div>
                 <Image
                   src={"/icons/pediatric-dentistry.svg"}
-                  width={41.51}
-                  height={38.62}
+                  width={42}
+                  height={0}
                   alt=""
                   aria-hidden="true"
                 />
+                <h2>Pediatric Dentistry</h2>
+                <p>
+                  Give your child the best start to lifelong oral health with gentle, compassionate dental care in a kid-friendly environment.
+                </p>
               </div>
-              <h2>Pediatric Dentistry</h2>
-              <p>
-                Give your child the best start to lifelong oral health with gentle, compassionate dental care in a kid-friendly environment.
-              </p>
-            </div>
-            <div>
               <div>
                 <Image
                   src={"/icons/implant-dentistry.png"}
-                  width={44.07}
-                  height={44.07}
+                  width={44}
+                  height={0}
                   alt=""
                   aria-hidden="true"
                 />
+                <h2>Implant Dentistry</h2>
+                <p>
+                  Restore missing teeth with durable, natural-looking dental implants that feel and function like your own.
+                </p>
               </div>
-              <h2>Implant Dentistry</h2>
-              <p>
-                Restore missing teeth with durable, natural-looking dental implants that feel and function like your own.
-              </p>
             </div>
+            <Link href="/services">
+              <div className="flex justify-center border-4 border-[#80C6C6] inline-block px-8 py-2.5 rounded-full mt-15">
+                <button className="flex items-center text-white gap-x-3 cursor-pointer">
+                  Learn More
+                  <Image
+                    src={"/icons/right-arrow.svg"}
+                    width={10}
+                    height={0}
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </button>
+              </div>
+            </Link>
           </div>
-          <div>
-            <button>
-              Learn More
-              <Image
-                src={"/icons/right-arrow.svg"}
-                width={9.95}
-                height={9.62}
-                alt=""
-                aria-hidden="true"
-              />
-            </button>
-          </div>
-        </div>
-        <div>
-          <div>
+        </Container>
+      </div>
+      <Container>
+        <div className="text-center mt-25">
+          <div className="flex justify-center">
             <Image
               src={"/icons/stars.svg"}
-              width={201.05}
-              height={30.91}
+              width={201}
+              height={0}
               alt=""
               aria-hidden="true"
             />
           </div>
-          <h1>See Why Patients Choose Us</h1>
-          <p>See what our patients are saying about their experience with us.</p>
-          <nav>
-            <ul>
-              <li>Brampton</li>
+          <h1 className="mt-6">See Why Patients Choose Us</h1>
+          <p className="mt-4">See what our patients are saying about their experience with us.</p>
+          <nav className="mt-7">
+            <ul className="[&>li]:px-6 [&>li]:py-2.5 [&>li]:text-center [&>li]:inline-block [&>li]:rounded-full">
+              <li className="selected">Brampton</li>
               <li>Vaughan</li>
             </ul>
           </nav>
-          <div>
-            <div>
-              “Dr. Jain has been our family dentist since I could renember and it has always been a pleasure to go to him. The entire team in the clinic is so friendly and nice. They took care of my 5 month baby while I got my cleaning done. The hygenist was also super helpful asking if I was comfortable and doing a thorough job. Had an amazing experience. Thank you Dr. Jain & team!”
+          <GoogleReviews/>
+          <div className="flex text-left [&>p:nth-child(even)]:bg-[#D5ECF9] [&>p:nth-child(odd)]:bg-white [&>p]:p-10 gap-x-6 [&>p]:rounded-[10px] mt-8">
+            <p>
+              “Dr. Jain has been our family dentist since I could renember and it has always been a pleasure to go to him. The entire team in the clinic is so friendly and nice. They took care of my 5 month baby while I got my cleaning done. The hygenist was also super helpful asking if I was comfortable and doing a thorough job. Had an amazing experience. Thank you Dr. Jain & team!”<br /><br />
 
               - Haiqa S.
-            </div>
-            <div>
-              “Dr. Jain has been our family dentist since I could renember and it has always been a pleasure to go to him. The entire team in the clinic is so friendly and nice. They took care of my 5 month baby while I got my cleaning done. The hygenist was also super helpful asking if I was comfortable and doing a thorough job. Had an amazing experience. Thank you Dr. Jain & team!”
+            </p>
+            <p>
+              “Dr. Jain has been our family dentist since I could renember and it has always been a pleasure to go to him. The entire team in the clinic is so friendly and nice. They took care of my 5 month baby while I got my cleaning done. The hygenist was also super helpful asking if I was comfortable and doing a thorough job. Had an amazing experience. Thank you Dr. Jain & team!”<br /><br />
 
               - Haiqa S.
-            </div>
-            <div>
-              “Dr. Jain has been our family dentist since I could renember and it has always been a pleasure to go to him. The entire team in the clinic is so friendly and nice. They took care of my 5 month baby while I got my cleaning done. The hygenist was also super helpful asking if I was comfortable and doing a thorough job. Had an amazing experience. Thank you Dr. Jain & team!”
+            </p>
+            <p>
+              “Dr. Jain has been our family dentist since I could renember and it has always been a pleasure to go to him. The entire team in the clinic is so friendly and nice. They took care of my 5 month baby while I got my cleaning done. The hygenist was also super helpful asking if I was comfortable and doing a thorough job. Had an amazing experience. Thank you Dr. Jain & team!”<br /><br />
 
               - Haiqa S.
-            </div>
+            </p>
             <div>
               <div> {/* nav menu */}
                 <div></div>
@@ -256,43 +253,45 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div>
-          <div>
+        <div className="mt-30 text-center">
+          <div className="flex justify-center">
             <Image
               src={"/icons/pin-blue.svg"}
-              width={74.66}
-              height={74.66}
+              width={75}
+              height={0}
               alt=""
               aria-hidden="true"
             />
           </div>
-          <h1>Tour Our Offices</h1>
-          <p>Discover our clean, comfortable, and family-friendly environment.</p>
-          <nav>
-            <ul>
-              <li>Vaughan</li>
+          <h1 className="mt-2">Tour Our Offices</h1>
+          <p className="mt-4">Discover our clean, comfortable, and family-friendly environment.</p>
+          <nav className="mt-7">
+            <ul className="[&>li]:px-6 [&>li]:py-2.5 [&>li]:text-center [&>li]:inline-block [&>li]:rounded-full">
+              <li className="selected">Vaughan</li>
               <li>Brampton</li>
             </ul>
           </nav>
-          <div>
+          {/* <OfficeTour /> */}
+          <div className="flex mt-10 h-100 [&>img]:object-cover [&>img]:rounded-[10px] gap-x-6 justify-center">
             <Image
               src={"/images/home-tour-1.jpg"}
-              width={513.84}
-              height={385.38}
+              width={488}
+              height={0}
               alt=""
               aria-hidden="true"
             />
             <Image
+              className="object-[50%_10%]"
               src={"/images/home-tour-2.jpg"}
-              width={462.46}
-              height={385.38}
+              width={488}
+              height={0}
               alt=""
               aria-hidden="true"
             />
             <Image
               src={"/images/home-tour-3.jpg"}
-              width={513.84}
-              height={385.38}
+              width={488}
+              height={0}
               alt=""
               aria-hidden="true"
             />
@@ -307,235 +306,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div>
-          <div></div> {/* white background */}
-          <h1>Visit Jain Dental</h1>
-          <p>Quality dental care, just around the corner.</p>
-          <div>
-            <div>
-              <h2>Brampton Location</h2>
-              <div>
-                <Image
-                  src={"/icons/pin.svg"}
-                  width={23.49}
-                  height={28.9}
-                  alt=""
-                  aria-hidden="true"
-                />
-                <p>
-                  Jain Dental Clinic:
-                  3938 Cottrelle Blvd #1
-                  Brampton, Ontario
-                  L6P 2R1
-                </p>
-              </div>
-              <div>
-                <Image
-                  src={"/icons/clock.svg"}
-                  width={26.25}
-                  height={26.6}
-                  alt=""
-                  aria-hidden="true"
-                />
-                <p>
-                  Mon, Wed, Fri: 10AM - 7PM
-                  Tue, Thu: 10AM - 6PM
-                  Sat: 9AM - 5PM
-                  Sun: Closed
-                </p>
-              </div>
-              <div>
-                <Image
-                  src={"/icons/phone-2.svg"}
-                  width={22.78}
-                  height={23.11}
-                  alt=""
-                  aria-hidden="true"
-                />
-                <p>
-                  (905) 794-0100
-                </p>
-              </div>
-            </div>
-            <div>
-              {/* google maps api */}
-            </div>
-          </div>
-          <div>
-            <div>
-              <h2>Vaughan Location</h2>
-              <div>
-                <Image
-                  src={"/icons/pin.svg"}
-                  width={23.49}
-                  height={28.9}
-                  alt=""
-                  aria-hidden="true"
-                />
-                <p>
-                  Jain Dental Centre:
-                  3971 Major MacKenzie Dr W #6
-                  Vaughan, Ontario
-                  L4H 4G1
-                </p>
-              </div>
-              <div>
-                <Image
-                  src={"/icons/clock.svg"}
-                  width={26.25}
-                  height={26.6}
-                  alt=""
-                  aria-hidden="true"
-                />
-                <p>
-                  Mon - Fri: 10AM - 7PM
-                  Sat: 9AM - 5PM
-                  Sun: Closed
-                </p>
-              </div>
-              <div>
-                <Image
-                  src={"/icons/phone-2.svg"}
-                  width={22.78}
-                  height={23.11}
-                  alt=""
-                  aria-hidden="true"
-                />
-                <p>
-                  (905) 832-0050
-                </p>
-              </div>
-            </div>
-            <div>
-              {/* google maps api */}
-            </div>
-          </div>
-        </div>
-        <div>
-          <Image
-            src={"/icons/jdc-logo-blue.png"}
-            width={74.78}
-            height={81.41}
-            alt=""
-            aria-hidden="true"
-          />
-          <h1>
-            Your Smile Deserves
-            Experienced Care
-          </h1>
-          <div>{/* underline */}</div>
-          <p>
-            Our team at Jain Dental Clinic is dedicated to keeping your smile healthy, comfortable, and confident. Call to book your appointment:
-          </p>
-          <div>
-            <Image
-              src={"/icons/phone-blue.svg"}
-              width={34}
-              height={34}
-              alt=""
-              aria-hidden="true"
-            />
-            <p>Brampton: 905-794-0100</p>
-          </div>
-          <div>
-            <Image
-              src={"/icons/phone-blue.svg"}
-              width={34}
-              height={34}
-              alt=""
-              aria-hidden="true"
-            />
-            <p>Vaughan: 905-832-0050</p>
-          </div>
-        </div>
-        <div>
-          <div>
-            <div>
-              <h2>Locations</h2>
-              <p>
-                3938 Cottrelle Blvd #1
-                Brampton, Ontario
-
-                (905) 788-5555
-              </p>
-              <p>
-                3971 Major MacKenzie Dr W #6
-                Vaughan, Ontario
-
-                (905) 832-0050
-              </p>
-            </div>
-            <div>
-              <h2>Navigation</h2>
-              <p>
-                Home
-                About
-                Services
-                Our Clinics
-                Team
-                Contact
-              </p>
-            </div>
-            <div>
-              <h2>Services</h2>
-              <p>
-                Preventive Care
-                Cosmetic Dentistry
-                Root Canal Treatment
-                Braces & Invisalign
-                Pediatric Dentistry
-                Implant Dentistry
-              </p>
-            </div>
-            <div>
-              <div>
-                <h2>Email</h2>
-                <p>info@jaindental.ca</p>
-              </div>
-              <div>
-                <h2>Contact</h2>
-                <p>Brampton:</p>
-                <p>info@jaindentalclinic.ca</p>
-                <div>
-                  <Image
-                    src={"/icons/facebook.svg"}
-                    width={26.67}
-                    height={26.6}
-                    alt=""
-                    aria-hidden="true"
-                  />
-                  <Image
-                    src={"/icons/instagram.svg"}
-                    width={27}
-                    height={27}
-                    alt=""
-                    aria-hidden="true"
-                  />
-                </div>
-                <p>Vaughan:</p>
-                <p>reception@jaindentalclinic.ca</p>
-                <div>
-                  <Image
-                    src={"/icons/facebook.svg"}
-                    width={26.67}
-                    height={26.6}
-                    alt=""
-                    aria-hidden="true"
-                  />
-                  <Image
-                    src={"/icons/instagram.svg"}
-                    width={27}
-                    height={27}
-                    alt=""
-                    aria-hidden="true"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <p>&#169; 2025 Jain Dental Clinic | All Rights Reserved</p>
-        </div>
       </Container>
+      <VisitUs />
+      <CallToAction />
+      <Footer current="home" />
     </>
   );
 }

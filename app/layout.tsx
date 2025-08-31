@@ -20,6 +20,7 @@ const sourceSerif4 = Source_Serif_4({
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
+  style: ['normal', 'italic'],
   subsets: ["latin"],
 });
 
