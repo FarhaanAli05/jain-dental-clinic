@@ -60,3 +60,7 @@ h2 {
 .selected {
   @apply bg-[#469BD1] text-white;
 }
+
+.current {
+  @apply bg-[white] text-[rgb(14,35,33)] rounded-[42px];
+}

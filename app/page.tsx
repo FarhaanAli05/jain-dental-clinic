@@ -19,8 +19,8 @@ export default function Home() {
         Personalized, Professional Care By <i>Experienced Dentists</i>
       </HeroSection>
       <Container>
-        <div className={styles.welcomeSection}>
-          <div className={styles.welcomeLeft}>
+        <div className="max-w-[1208px] grid grid-cols-[6fr_4fr] mt-[110px] mx-auto [&>p]:w-[88%]">
+          <div className="[&>p]:w-[88%] [&>div]:flex [&>div]:items-center [&>div]:gap-x-2.5">
             <Image
               src={"/icons/jdc-logo-blue.png"}
               width={104.67}
@@ -28,7 +28,7 @@ export default function Home() {
               alt=""
               aria-hidden="true"
             />
-            <h1>
+            <h1 className="mt-[27px] mb-9">
               Welcome to<br />
               Jain Dental Clinic!
             </h1>
@@ -67,33 +67,34 @@ export default function Home() {
               <p>Experienced dentists with a commitment to your comfort</p>
             </div>
           </div>
-          <div className={styles.welcomeRight}>
-            <div className={styles.welcomeImageContainer}>
+          <div>
+            <div>
               <Image
                 src={"/images/home-welcome.jpg"}
+                className="rounded-[10px] object-cover h-105"
                 width={443}
                 height={0}
                 alt=""
                 aria-hidden="true"
               />
             </div>
-            <div className="mt-[20px]">
-              <p className="mb-[6px]">Call to book an appointment:</p>
-              <div className="flex items-center mt-[15px] gap-x-[25px]">
+            <div className="flex flex-col justify-center [&>div]:flex [&>div]:items-center [&>div]:gap-x-3 [&>div]:mt-4">
+              <p className="mt-6 mb-1.5">Call to book an appointment:</p>
+              <div>
                 <Image
                   src={"/icons/phone-blue.svg"}
                   width={35}
-                  height={35}
+                  height={0}
                   alt=""
                   aria-hidden="true"
                 />
                 <p>Brampton: 905-794-0100</p>
               </div>
-              <div className="flex items-center mt-[15px] gap-x-[25px]">
+              <div>
                 <Image
                   src={"/icons/phone-blue.svg"}
                   width={35}
-                  height={35}
+                  height={0}
                   alt=""
                   aria-hidden="true"
                 />
@@ -219,14 +220,14 @@ export default function Home() {
           </div>
           <h1 className="mt-6">See Why Patients Choose Us</h1>
           <p className="mt-4">See what our patients are saying about their experience with us.</p>
-          <nav className="mt-7">
+          {/* <nav className="mt-7">
             <ul className="[&>li]:px-6 [&>li]:py-2.5 [&>li]:text-center [&>li]:inline-block [&>li]:rounded-full">
               <li className="selected">Brampton</li>
               <li>Vaughan</li>
             </ul>
-          </nav>
-          <GoogleReviews/>
-          <div className="flex text-left [&>p:nth-child(even)]:bg-[#D5ECF9] [&>p:nth-child(odd)]:bg-white [&>p]:p-10 gap-x-6 [&>p]:rounded-[10px] mt-8">
+          </nav> */}
+          <GoogleReviews />
+          {/* <div className="flex text-left [&>p:nth-child(even)]:bg-[#D5ECF9] [&>p:nth-child(odd)]:bg-white [&>p]:p-10 gap-x-6 [&>p]:rounded-[10px] mt-8">
             <p>
               “Dr. Jain has been our family dentist since I could renember and it has always been a pleasure to go to him. The entire team in the clinic is so friendly and nice. They took care of my 5 month baby while I got my cleaning done. The hygenist was also super helpful asking if I was comfortable and doing a thorough job. Had an amazing experience. Thank you Dr. Jain & team!”<br /><br />
 
@@ -243,7 +244,7 @@ export default function Home() {
               - Haiqa S.
             </p>
             <div>
-              <div> {/* nav menu */}
+              <div>
                 <div></div>
                 <div></div>
                 <div></div>
@@ -251,7 +252,7 @@ export default function Home() {
                 <div></div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="mt-30 text-center">
           <div className="flex justify-center">

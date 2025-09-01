@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Container from "./Container";
-import styles from "./HeroSection.module.css";
+import ServicesMenu from "./ServicesMenu";
 
 export default function HeroSection({
   current,
@@ -16,14 +16,14 @@ export default function HeroSection({
 }) {
   return (
     <div
-      className={`${styles.heroSection} ${className}`}
+      className={`bg-no-repeat bg-center bg-cover h-screen w-full relative before:content-[''] before:bg-[linear-gradient(to_bottom,#00162B,#2C5983)] before:bg-no-repeat before:bg-center before:bg-cover before:h-full before:w-full before:opacity-70 before:absolute before:z-[1] ${className}`}
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <Container className={"py-5 h-full"}>
-        <div className={styles.heroContent}>
-          <div className={styles.header}>
+        <div className="relative z-[2] text-[white] flex h-full flex-col">
+          <div className="flex justify-between items-center">
             <Link href="/">
-              <div className={styles.logoContainer}>
+              <div className="flex items-center">
                 <Image
                   src={"/icons/jdc-logo-white.png"}
                   width={78}
@@ -31,58 +31,41 @@ export default function HeroSection({
                   alt=""
                   aria-hidden="true"
                 />
-                <h3>Jain Dental Clinic</h3>
+                <h3 className="text-2xl font-medium ml-6">Jain Dental Clinic</h3>
               </div>
             </Link>
             <nav>
-              <ul>
+              <ul className="flex gap-x-1.25 [&>li]:px-8 [&>li]:h-[38px] [&>li]:flex [&>li]:justify-center [&>li]:items-center [&>li]:rounded-full">
                 <li className={
-                  current === "home" ? styles.current : ""
+                  current === "home" ? "current" : ""
                 }><Link href="/">Home</Link></li>
                 <li className={
-                  current === "about" ? styles.current : ""
+                  current === "about" ? "current" : ""
                 }><Link href="/about">About</Link></li>
                 <li className={
-                  `${styles.servicesMenu}
+                  `w-[120px]
                   ${current === "services"
-                    ? styles.current
+                    ? "current"
                     : ""
                   }`
                 }>
-                  <Link href="/services">
-                    Services
-                    <Image
-                      src={"/icons/arrow-down.svg"}
-                      width={10}
-                      height={5}
-                      alt=""
-                      aria-hidden="true"
-                    />
-                  </Link>
-                  {/* <div>
-                    <h3><Link href="/services/preventive-care">Preventive Care</Link></h3>
-                    <h3><Link href="/services/cosmetic-dentistry">Cosmetic Dentistry</Link></h3>
-                    <h3><Link href="/services/root-canal-treatment">Root Canal Treatment</Link></h3>
-                    <h3><Link href="/services/braces-and-invisalign">Braces & Invisalign</Link></h3>
-                    <h3><Link href="/services/pediatric-dentistry">Pediatric Dentistry</Link></h3>
-                    <h3><Link href="/services/implant-dentistry">Implant Dentistry</Link></h3>
-                  </div> */}
+                  <ServicesMenu />
                 </li>
                 <li className={
-                  current === "clinic" ? styles.current : ""
+                  current === "clinic" ? "current" : ""
                 }><Link href="/clinic">Our Clinics</Link></li>
                 <li className={
-                  current === "team" ? styles.current : ""
+                  current === "team" ? "current" : ""
                 }><Link href="/team">Team</Link></li>
                 <li className={
-                  current === "contact" ? styles.current : ""
+                  current === "contact" ? "current" : ""
                 }><Link href="/contact">Contact</Link></li>
               </ul>
             </nav>
           </div>
-          <div className={styles.heroText}>
-            <h1 className="!text-[50px]">{children}</h1>
-            <p className={styles.callToAction}>Call to book an appointment:</p>
+          <div className="h-[90%] flex flex-col justify-center [&>div]:flex [&>div]:items-center [&>div]:gap-x-3 [&>div]:mt-4">
+            <h1 className="!text-[50px] max-w-150">{children}</h1>
+            <p className="mt-6.5 mb-1.5">Call to book an appointment:</p>
             <div>
               <Image
                 src={"/icons/phone.svg"}
