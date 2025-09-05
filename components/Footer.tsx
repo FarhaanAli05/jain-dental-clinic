@@ -5,8 +5,8 @@ import Image from "next/image";
 export default function Footer({ current }: { current: string }) {
   return (
     <div className="bg-[#1C2A3A] text-white pt-18">
-      <Container className="max-w-350">
-        <div className="grid grid-cols-4">
+      <Container className="flex justify-center">
+        <div className="w-300 grid xl:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-y-10">
           <div className="[&>p]:mt-5">
             <h2>Locations</h2>
             <p className="mb-8">

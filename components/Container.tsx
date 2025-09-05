@@ -4,5 +4,5 @@ interface ContainerProps {
 }
 
 export default function Container({ children, className = "" }: ContainerProps) {
-  return <div className={`container mx-auto ${className}`}>{children}</div>
+  return <div className={`lg:mx-40 sm:mx-20 mx-10 ${className}`}>{children}</div>
 }

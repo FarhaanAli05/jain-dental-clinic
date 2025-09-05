@@ -45,8 +45,18 @@ export default function GoogleReviews() {
         </ul>
       </nav>
       <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1280: {
+            slidesPerView: 3,
+          }
+        }}
+        spaceBetween={20}
         rewind
         // autoplay={{
         //   delay: 2500,
@@ -56,7 +66,7 @@ export default function GoogleReviews() {
           clickable: true,
         }}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper [--swiper-pagination-bottom:0px] [--swiper-pagination-color:#0B7192] !pb-10 mb-[-10] "
+        className="mySwiper [--swiper-pagination-bottom:0px] [--swiper-pagination-color:#0B7192] !pb-10 mb-[-10]"
       >
         {reviews[city].map((review, i) => {
           return (

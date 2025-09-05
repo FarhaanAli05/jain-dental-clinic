@@ -17,7 +17,7 @@ export default function ServicesMenu() {
         setShowServices(false);
       }}
     >
-      <Link href="/services">
+      <Link href="/services" className="py-5">
         Services
         <Image
           src={"/icons/arrow-down.svg"}
@@ -28,7 +28,7 @@ export default function ServicesMenu() {
         />
       </Link>
       {showServices && (
-        <div>
+        <div className="flex flex-col absolute bg-white [&>h3]:text-[#0E2321] p-4 gap-y-2 top-17 rounded-[10px]">
           <h3><Link href="/services/preventive-care">Preventive Care</Link></h3>
           <h3><Link href="/services/cosmetic-dentistry">Cosmetic Dentistry</Link></h3>
           <h3><Link href="/services/root-canal-treatment">Root Canal Treatment</Link></h3>

@@ -1,35 +1,29 @@
 import Image from "next/image";
 import Container from "@/components/Container";
-import HeroSection from "@/components/HeroSection";
-import styles from "./page.module.css";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import CallToAction from "@/components/CallToAction";
 import GoogleReviews from "@/components/GoogleReviews";
 import VisitUs from "@/components/VisitUs";
 import OfficeTour from "@/components/OfficeTour";
+import HeroSectionHome from "@/components/HeroSectionHome";
 
 export default function Home() {
   return (
     <>
-      <HeroSection
-        current="home"
-        backgroundImage={'/images/home-banner.webp'}
-      >
-        Personalized, Professional Care By <i>Experienced Dentists</i>
-      </HeroSection>
+      <HeroSectionHome/>
       <Container>
-        <div className="max-w-[1208px] grid grid-cols-[6fr_4fr] mt-[110px] mx-auto [&>p]:w-[88%]">
+        <div className="max-w-302 md:grid lg:grid-cols-[6fr_4fr] grid-cols-1 mt-10 md:mt-25 mx-auto lg:[&>p]:w-[88%] [&>p]:w-full">
           <div className="[&>p]:w-[88%] [&>div]:flex [&>div]:items-center [&>div]:gap-x-2.5">
             <Image
               src={"/icons/jdc-logo-blue.png"}
-              width={104.67}
-              height={113.95}
+              width={105}
+              height={0}
               alt=""
               aria-hidden="true"
             />
-            <h1 className="mt-[27px] mb-9">
-              Welcome to<br />
+            <h1 className="mt-7 mb-9">
+              Welcome to <br className="hidden lg:block" />
               Jain Dental Clinic!
             </h1>
             <p>
@@ -71,7 +65,7 @@ export default function Home() {
             <div>
               <Image
                 src={"/images/home-welcome.jpg"}
-                className="rounded-[10px] object-cover h-105"
+                className="rounded-[10px] object-cover mt-8 lg:mt-0 lg:w-full"
                 width={443}
                 height={0}
                 alt=""
@@ -104,13 +98,13 @@ export default function Home() {
           </div>
         </div>
       </Container>
-      <div className="relative bg-[url(/images/home-services-background.jpg)] bg-no-repeat bg-cover bg-center h-240 mt-35">
+      <div className="relative bg-[url(/images/home-services-background.jpg)] bg-no-repeat bg-cover bg-center h-full mt-35">
         <div className="absolute bg-gradient-to-b from-[#00162B] to-[#2C3E50] bg-no-repeat bg-center bg-cover h-full w-full opacity-60 z-10" />
         <Container className="py-2">
           <div className="relative z-20 text-center py-15">
             <h3 className="px-8 py-2.5 bg-[#EBFDFF] text-center inline-block rounded-full">Services</h3>
-            <h1 className="text-white mt-2 mt-6">Comprehensive Care For <i>Every Smile</i></h1>
-            <div className="grid grid-cols-3 gap-6 text-left mt-10 [&>div]:bg-white [&>div]:h-65 [&>div]:p-7 [&>div]:rounded-[10px] [&>div>h2]:mt-3 [&>div>p]:mt-3">
+            <h1 className="text-white mt-2 mt-6 whitespace-normal break-words">Comprehensive Care For <i>Every Smile</i></h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 text-left mt-10 [&>div]:bg-white [&>div]:h-full [&>div]:p-7 [&>div]:rounded-[10px] [&>div>h2]:mt-3 [&>div>p]:mt-3">
               <div>
                 <Image
                   src={"/icons/preventive-care.svg"}
@@ -191,7 +185,7 @@ export default function Home() {
               </div>
             </div>
             <Link href="/services">
-              <div className="flex justify-center border-4 border-[#80C6C6] inline-block px-8 py-2.5 rounded-full mt-15">
+              <div className="flex justify-center border-3 border-[#80C6C6] inline-block px-8 py-2.5 rounded-full mt-15">
                 <button className="flex items-center text-white gap-x-3 cursor-pointer">
                   Learn More
                   <Image
@@ -266,14 +260,14 @@ export default function Home() {
           </div>
           <h1 className="mt-2">Tour Our Offices</h1>
           <p className="mt-4">Discover our clean, comfortable, and family-friendly environment.</p>
-          <nav className="mt-7">
+          {/* <nav className="mt-7">
             <ul className="[&>li]:px-6 [&>li]:py-2.5 [&>li]:text-center [&>li]:inline-block [&>li]:rounded-full">
               <li className="selected">Vaughan</li>
               <li>Brampton</li>
             </ul>
-          </nav>
-          {/* <OfficeTour /> */}
-          <div className="flex mt-10 h-100 [&>img]:object-cover [&>img]:rounded-[10px] gap-x-6 justify-center">
+          </nav> */}
+          <OfficeTour />
+          {/* <div className="flex mt-10 h-100 [&>img]:object-cover [&>img]:rounded-[10px] gap-x-6 justify-center">
             <Image
               src={"/images/home-tour-1.jpg"}
               width={488}
@@ -298,14 +292,14 @@ export default function Home() {
             />
           </div>
           <div>
-            <div> {/* nav menu */}
+            <div>
               <div></div>
               <div></div>
               <div></div>
               <div></div>
               <div></div>
             </div>
-          </div>
+          </div> */}
         </div>
       </Container>
       <VisitUs />

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Source_Serif_4, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -39,7 +40,8 @@ export default function RootLayout({
       <body
         className={`${sourceSerif4.variable} ${plusJakartaSans.variable} antialiased`}
       >
-        {children}
+        {/* <Navbar /> */}
+        <main>{children}</main>
       </body>
     </html>
   );

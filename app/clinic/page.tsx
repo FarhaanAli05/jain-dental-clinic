@@ -9,7 +9,6 @@ export default function Clinic() {
   return (
     <>
       <HeroSection
-        current="clinic"
         backgroundImage={'/images/clinic-banner.jpg'}
       >
         See Where Smiles Begin

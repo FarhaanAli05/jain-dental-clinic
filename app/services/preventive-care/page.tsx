@@ -8,7 +8,6 @@ export default function PreventiveCare() {
   return (
     <>
       <HeroSection
-        current="services"
         backgroundImage={'/images/preventive-dentistry-banner.jpeg'}
         className="!bg-[position:50%_45%]"
       >

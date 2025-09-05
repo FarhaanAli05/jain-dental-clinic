@@ -48,23 +48,35 @@ export default function GoogleReviews() {
         </ul>
       </nav>
       <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1280: {
+            slidesPerView: 3,
+          }
+        }}
+        spaceBetween={20}
+        rewind
         autoplay={{
-          delay: 2500,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         pagination={{
           clickable: true,
         }}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiper [--swiper-pagination-bottom:0px] [--swiper-pagination-color:#0B7192] !pb-10 mb-[-10]"
       >
         {images[city].map((image, i) => {
           return (
-            <SwiperSlide key={i}>
+            <SwiperSlide key={i} className="gap-x-6 mt-8">
               <Image
                 src={image}
+                className="h-92 rounded-[10px] object-cover"
                 width={488}
                 height={0}
                 alt=""

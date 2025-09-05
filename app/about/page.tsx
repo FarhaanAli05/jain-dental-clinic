@@ -8,7 +8,6 @@ export default function About() {
   return (
     <>
       <HeroSection
-        current="about"
         backgroundImage={'/images/about-banner.jpg'}
       >
         Caring for <i>Smiles</i>, One Patient At A Time

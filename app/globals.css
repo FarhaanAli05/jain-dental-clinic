@@ -24,7 +24,7 @@ body::after {
 p, label, input, textarea, .send-message {
   font-family: var(--font-plus-jakarta-sans), sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1em;
   letter-spacing: 0.01em;
   line-height: 1.5em;
 }
@@ -42,11 +42,26 @@ li {
 }
 
 h1 {
-  font-size: 42px;
+  font-size: 2.625em;
+}
+
+@media screen and (min-width: 0px) and (max-width: 365px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 2em;
+}
+
+h1, h2 {
+  white-space: normal;
+  word-break: break-word;
 }
 
 /* .container {

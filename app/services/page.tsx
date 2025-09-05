@@ -8,7 +8,6 @@ export default function Services() {
   return (
     <>
       <HeroSection
-        current="services"
         backgroundImage="/images/home-services-background.jpg"
       >
         Personalized Solutions For <i>Every Smile</i>

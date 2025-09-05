@@ -7,7 +7,7 @@ export default function VisitUs() {
       <Container>
         <h1>Visit Jain Dental</h1>
         <p className="mt-4">Quality dental care, just around the corner.</p>
-        <div className="flex text-left gap-x-1 mt-17 pl-14">
+        <div className="flex xl:flex-row flex-col text-left gap-x-1 mt-17 pl-14">
           <div className="[&>div]:flex [&>div]:items-start [&>div]:gap-x-9 flex-1 [&>div]:mt-4">
             <h2 className="mb-10">Brampton Location</h2>
             <div>
@@ -55,8 +55,7 @@ export default function VisitUs() {
           </div>
           <div className="flex flex-3 justify-center">
             <iframe
-              width="1068"
-              height="333"
+              className="w-full h-[333px] mt-10 xl:mt-0 xl:ml-10"
               style={{ "border": 0 }}
               loading="lazy"
               allowFullScreen
@@ -66,7 +65,7 @@ export default function VisitUs() {
             </iframe>
           </div>
         </div>
-        <div className="flex text-left gap-x-1 mt-17 pl-14">
+        <div className="flex xl:flex-row flex-col text-left gap-x-1 mt-17 pl-14">
           <div className="[&>div]:flex [&>div]:items-start [&>div]:gap-x-9 flex-1 [&>div]:mt-4">
             <h2 className="mb-10">Vaughan Location</h2>
             <div>
@@ -113,8 +112,7 @@ export default function VisitUs() {
           </div>
           <div className="flex flex-3 justify-center">
             <iframe
-              width="1068"
-              height="333"
+              className="w-full h-[333px] mt-10 xl:mt-0 xl:ml-10"
               style={{ "border": 0 }}
               loading="lazy"
               allowFullScreen

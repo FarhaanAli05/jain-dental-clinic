@@ -8,7 +8,6 @@ export default function Team() {
   return (
     <>
       <HeroSection
-        current="team"
         backgroundImage={'/images/team-banner.jpg'}
       >
         Dedicated To Your <i>Comfort</i>, <i>Health</i>, and <i>Smile</i>

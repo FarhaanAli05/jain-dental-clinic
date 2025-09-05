@@ -9,7 +9,6 @@ export default function Contact() {
   return (
     <>
       <HeroSection
-        current="contact"
         backgroundImage={'/images/contact-banner.jpg'}
       >
         Reach Out <i>Today</i> — We're Just A Call Or Message Away
