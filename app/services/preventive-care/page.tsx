@@ -14,17 +14,17 @@ export default function PreventiveCare() {
         Proactive Dental Care for A Lifetime Of Healthy Smiles
       </HeroSection>
       <Container className="mb-20">
-        <div className="flex gap-x-13 mt-20">
+        <div className="flex flex-col xl:flex-row gap-x-13 mt-20">
           <Image
             src={"/images/home-welcome.jpg"}
-            className="rounded-[10px] object-cover"
+            className="rounded-[10px] object-cover order-1 h-100 w-full mt-8 xl:ml-5 xl:w-120"
             width={490}
             height={0}
             alt=""
             aria-hidden="true"
           />
           <div>
-            <h3 className="px-8 py-2.5 bg-[#EBFDFF] text-center inline-block rounded-full mt-[-80]">Preventive Care</h3>
+            <h3 className="px-8 py-2.5 bg-[#EBFDFF] text-center inline-block rounded-full mb-3">Preventive Care</h3>
             <h1 className="ml-2">Preventive Dentistry for Lifelong Oral Health</h1>
             {/* <div className="bg-[#CAFAFF] w-123 h-7 mt-[-33]" /> */}
             <p className="mt-10">
@@ -35,7 +35,8 @@ export default function PreventiveCare() {
           </div>
         </div>
       </Container>
-      <CallToAction>Protect Your Smile For Years To Come — Call Us Today To Book Your Next Preventive Appointment.</CallToAction>
+      {/* <CallToAction>Protect Your Smile For Years To Come — Call Us Today To Book Your Next Preventive Appointment.</CallToAction> */}
+      <CallToAction/>
       <Footer current="preventive-care" />
     </>
   );

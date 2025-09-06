@@ -11,7 +11,7 @@ import HeroSectionHome from "@/components/HeroSectionHome";
 export default function Home() {
   return (
     <>
-      <HeroSectionHome/>
+      <HeroSectionHome />
       <Container>
         <div className="max-w-302 md:grid lg:grid-cols-[6fr_4fr] grid-cols-1 mt-10 md:mt-25 mx-auto lg:[&>p]:w-[88%] [&>p]:w-full">
           <div className="[&>p]:w-[88%] [&>div]:flex [&>div]:items-center [&>div]:gap-x-2.5">
@@ -61,17 +61,16 @@ export default function Home() {
               <p>Experienced dentists with a commitment to your comfort</p>
             </div>
           </div>
+          {/* <div className="lg:ml-8"> */}
           <div>
-            <div>
-              <Image
-                src={"/images/home-welcome.jpg"}
-                className="rounded-[10px] object-cover mt-8 lg:mt-0 lg:w-full"
-                width={443}
-                height={0}
-                alt=""
-                aria-hidden="true"
-              />
-            </div>
+            <Image
+              src={"/images/home-welcome.jpg"}
+              className="rounded-[10px] object-cover order-1 h-100 w-full mt-8 xl:w-120"
+              width={443}
+              height={0}
+              alt=""
+              aria-hidden="true"
+            />
             <div className="flex flex-col justify-center [&>div]:flex [&>div]:items-center [&>div]:gap-x-3 [&>div]:mt-4">
               <p className="mt-6 mb-1.5">Call to book an appointment:</p>
               <div>

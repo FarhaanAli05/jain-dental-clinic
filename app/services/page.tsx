@@ -16,7 +16,7 @@ export default function Services() {
         <div className="relative z-20 text-center py-15">
           <h3 className="px-8 py-2.5 bg-[#EBFDFF] text-center inline-block rounded-full">Services</h3>
           <h1 className="mt-2 mt-6">How We Care For Your Smile</h1>
-          <div className="grid grid-cols-3 gap-6 text-left mt-10 [&>div]:bg-white [&>div]:h-65 [&>div]:p-7 [&>div]:rounded-[10px] [&>div>h2]:mt-3 [&>div>p]:mt-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 text-left mt-10 [&>div]:bg-white [&>div]:h-full [&>div]:p-7 [&>div]:rounded-[10px] [&>div>h2]:mt-3 [&>div>p]:mt-3">
             <div>
               <Image
                 src={"/icons/preventive-care.svg"}
@@ -98,7 +98,7 @@ export default function Services() {
           </div>
         </div>
       </Container>
-      <CallToAction/>
+      <CallToAction />
       <Footer current="services" />
     </>
   );

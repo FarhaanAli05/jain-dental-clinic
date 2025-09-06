@@ -3,10 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import ServicesMenu from "./ServicesMenu";
-import { useSelectedLayoutSegment } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
-  const segment = useSelectedLayoutSegment();
+  const pathname = usePathname();
 
   return (
     <div className="relative !py-2 lg:!py-5 lg:top-0 flex lg:justify-between lg:items-center z-50 w-full text-white">
@@ -26,14 +26,14 @@ export default function Navbar() {
       <nav className="hidden xl:block">
         <ul className="flex gap-x-1.25 [&>li]:px-5 [&>li]:h-[38px] [&>li]:flex [&>li]:justify-center [&>li]:items-center [&>li]:rounded-full">
           <li className={
-            !segment ? "current" : ""
+            pathname === "/" ? "current" : ""
           }><Link href="/">Home</Link></li>
           <li className={
-            segment === "about" ? "current" : ""
+            pathname.startsWith("/about") ? "current" : ""
           }><Link href="/about">About</Link></li>
           <li className={
             `w-[120px]
-                  ${segment === "services"
+            ${pathname.startsWith("/services")
               ? "current"
               : ""
             }`
@@ -41,13 +41,13 @@ export default function Navbar() {
             <ServicesMenu />
           </li>
           <li className={
-            segment === "clinic" ? "current" : ""
+            pathname.startsWith("/clinic") ? "current" : ""
           }><Link href="/clinic">Our Clinics</Link></li>
           <li className={
-            segment === "team" ? "current" : ""
+            pathname.startsWith("/team") ? "current" : ""
           }><Link href="/team">Team</Link></li>
           <li className={
-            segment === "contact" ? "current" : ""
+            pathname.startsWith("/contact") ? "current" : ""
           }><Link href="/contact">Contact</Link></li>
         </ul>
       </nav>

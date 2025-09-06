@@ -14,17 +14,17 @@ export default function ImplantDentistry() {
         Lasting Solutions For Missing Teeth
       </HeroSection>
       <Container className="mb-20">
-        <div className="flex gap-x-13 mt-20">
+        <div className="flex flex-col xl:flex-row gap-x-13 mt-20">
           <Image
             src={"/images/preventive-dentistry-banner.jpeg"}
-            className="rounded-[10px] object-cover h-100"
+            className="rounded-[10px] object-cover order-1 h-100 w-full mt-8 xl:ml-5 xl:w-120"
             width={490}
             height={0}
             alt=""
             aria-hidden="true"
           />
           <div>
-            <h3 className="px-8 py-2.5 bg-[#EBFDFF] text-center inline-block rounded-full mt-[-80]">Implant Dentistry</h3>
+            <h3 className="px-8 py-2.5 bg-[#EBFDFF] text-center inline-block rounded-full mb-3">Implant Dentistry</h3>
             <h1 className="ml-2">Restore Your Smile With Dental Implants</h1>
             {/* <div className="bg-[#CAFAFF] w-123 h-7 mt-[-33]" /> */}
             <p className="mt-10">
@@ -35,7 +35,8 @@ export default function ImplantDentistry() {
           </div>
         </div>
       </Container>
-      <CallToAction>Rebuild Your Smile With Confidence — Call Us Today To Schedule Your Implant Consultation.</CallToAction>
+      {/* <CallToAction>Rebuild Your Smile With Confidence — Call Us Today To Schedule Your Implant Consultation.</CallToAction> */}
+      <CallToAction/>
       <Footer current="implant-dentistry" />
     </>
   );

@@ -14,17 +14,17 @@ export default function BracesAndInvisalign() {
         Straight Smiles Made Simple
       </HeroSection>
       <Container className="mb-20">
-        <div className="flex gap-x-13 mt-20">
+        <div className="flex flex-col xl:flex-row gap-x-13 mt-20">
           <Image
-            src={"/images/braces-and-invisalign-banner.avif"}
-            className="rounded-[10px] object-cover"
+            src={"/images/braces-and-invisalign.avif"}
+            className="rounded-[10px] object-cover order-1 h-100 w-full mt-8 xl:ml-5 xl:w-120"
             width={490}
             height={0}
             alt=""
             aria-hidden="true"
           />
           <div>
-            <h3 className="px-8 py-2.5 bg-[#EBFDFF] text-center inline-block rounded-full mt-[-80]">Braces & Invisalign</h3>
+            <h3 className="px-8 py-2.5 bg-[#EBFDFF] text-center inline-block rounded-full mb-3">Braces & Invisalign</h3>
             <h1 className="ml-2">Braces & Invisalign For Every Age</h1>
             {/* <div className="bg-[#CAFAFF] w-123 h-7 mt-[-33]" /> */}
             <p className="mt-10">
@@ -35,7 +35,8 @@ export default function BracesAndInvisalign() {
           </div>
         </div>
       </Container>
-      <CallToAction>Start Your Journey To A Straighter Smile — Call Us Today To Book Your Orthodontic Consultation.</CallToAction>
+      {/* <CallToAction>Start Your Journey To A Straighter Smile — Call Us Today To Book Your Orthodontic Consultation.</CallToAction> */}
+      <CallToAction/>
       <Footer current="braces-and-invisalign" />
     </>
   );

@@ -3,7 +3,6 @@ import Container from "@/components/Container";
 import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
 import HeroSection from "@/components/HeroSection";
-import Image from "next/image";
 
 export default function Clinic() {
   return (

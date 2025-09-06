@@ -20,7 +20,7 @@ export default function ServicesMenu() {
       <Link href="/services" className="py-5">
         Services
         <Image
-          src={"/icons/arrow-down.svg"}
+          src={"/icons/down-arrow-white.svg"}
           width={10}
           height={5}
           alt=""

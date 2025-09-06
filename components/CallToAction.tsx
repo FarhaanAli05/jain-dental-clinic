@@ -27,7 +27,7 @@ export default function CallToAction({ children }: { children?: React.ReactNode 
           <div className="bg-[#9EDCFF] w-138 h-8 mt-[-35] z-0" />
         </div> */}
         <p className="mt-7">
-          Our team at Jain Dental Clinic is dedicated to keeping your smile healthy,<br />
+          Our team at Jain Dental Clinic is dedicated to keeping your smile healthy, <br className="md:block hidden" />
           comfortable, and confident. Call to book your appointment:
         </p>
         <div className="mt-[20px] [&>div]:justify-center">
