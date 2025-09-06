@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const images = {
   vaughan: [
-    { src: "/images/about-banner.jpg", height: 252 },
+    { src: "/images/about-banner.avif", height: 252 },
     { src: "/images/clinic-vaughan-1.jpg", height: 332 },
     { src: "/images/home-tour-1.jpg", height: 298 },
     { src: "/images/clinic-vaughan-2.jpg", height: 445 },

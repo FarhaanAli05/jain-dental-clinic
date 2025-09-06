@@ -25,8 +25,8 @@ export default function PreventiveCare() {
           />
           <div>
             <h3 className="px-8 py-2.5 bg-[#EBFDFF] text-center inline-block rounded-full mt-[-80]">Preventive Care</h3>
-            <h1 className="ml-2">Proactive Dental Care for A Lifetime Of Healthy Smiles</h1>
-            <div className="bg-[#CAFAFF] w-123 h-7 mt-[-33]" />
+            <h1 className="ml-2">Preventive Dentistry for Lifelong Oral Health</h1>
+            {/* <div className="bg-[#CAFAFF] w-123 h-7 mt-[-33]" /> */}
             <p className="mt-10">
               A healthy smile starts with prevention. Our preventive dentistry services are designed to stop dental problems before they start, helping you maintain strong teeth and gums at every stage of life. From regular checkups and professional cleanings to fluoride treatments and sealants, we provide the care and guidance you need to keep your smile looking and feeling its best.<br/><br/>
 
@@ -35,7 +35,7 @@ export default function PreventiveCare() {
           </div>
         </div>
       </Container>
-      <CallToAction>Your Healthiest Smile Starts Here.</CallToAction>
+      <CallToAction>Protect Your Smile For Years To Come — Call Us Today To Book Your Next Preventive Appointment.</CallToAction>
       <Footer current="preventive-care" />
     </>
   );

@@ -8,14 +8,14 @@ export default function About() {
   return (
     <>
       <HeroSection
-        backgroundImage={'/images/about-banner.jpg'}
+        backgroundImage={'/images/about-banner.avif'}
       >
         Caring for <i>Smiles</i>, One Patient At A Time
       </HeroSection>
       <Container className="mb-20">
         <div className="flex gap-x-13 mt-20">
           <Image
-            src={"/images/about-banner.jpg"}
+            src={"/images/about-banner.avif"}
             className="rounded-[10px] object-cover"
             width={490}
             height={0}
