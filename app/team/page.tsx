@@ -17,16 +17,16 @@ export default function Team() {
           <h3 className="px-8 py-2.5 bg-[#EBFDFF] text-center inline-block rounded-full">Our Team</h3>
           <h1 className="mt-2 mt-6">Meet Our Doctors</h1>
         </div>
-        <div className="flex gap-x-20 rounded-[10px]">
+        <div className="flex gap-x-20 rounded-[10px] lg:flex-row flex-col">
           <Image
             src={"/images/dr-bhushan-jain.jpg"}
-            className="object-cover"
+            className="object-cover w-450 h-full"
             width={496}
             height={0}
             alt=""
             aria-hidden="true"
           />
-          <div className="flex flex-col gap-y-5 justify-top">
+          <div className="flex flex-col gap-y-5 justify-top mt-10 lg:mt-0">
             <h1>Dr. Bhushan Jain</h1>
             <h2>BDS, DDS, FICOI, Cert. IV Sedation</h2>
             <p>
@@ -36,16 +36,16 @@ export default function Team() {
             </p>
           </div>
         </div>
-        <div className="flex gap-x-20 my-15 rounded-[10px]">
+        <div className="flex gap-x-20 rounded-[10px] lg:flex-row flex-col mt-10">
           <Image
             src={"/images/dr-meenakshi-jain.jpg"}
-            className="object-cover"
+            className="object-cover w-450 h-full"
             width={496}
             height={0}
             alt=""
             aria-hidden="true"
           />
-          <div className="flex flex-col gap-y-5 justify-top">
+          <div className="flex flex-col gap-y-5 justify-top mt-10 lg:mt-0">
             <h1>Dr. Meenakshi Jain</h1>
             <h2>BDS, DDS</h2>
             <p>

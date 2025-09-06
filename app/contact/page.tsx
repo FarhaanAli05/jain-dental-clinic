@@ -14,16 +14,16 @@ export default function Contact() {
         Reach Out <i>Today</i> — We're Just A Call Or Message Away
       </HeroSection>
       <Container className="mt-25">
-        <div className="flex gap-x-20">
+        <div className="flex gap-x-20 justify-between lg:flex-row flex-col">
           <div className="flex-1">
-            <h1>
+            <h1 className="lg:mb-0 mb-10">
               We're Here<br />
               To Help You Smile
             </h1>
             <div />
             <Image
               src={"/images/team-banner.jpg"}
-              className="rounded-[10px] mt-10"
+              className="rounded-[10px] mt-10 lg:block hidden object-cover"
               width={654}
               height={0}
               alt=""
@@ -31,7 +31,7 @@ export default function Contact() {
               priority
             />
           </div>
-          <form className="flex flex-col bg-[#CFE7F7] [&>input,&>textarea]:bg-white [&>input,&>textarea]:mb-5 [&>input,&>textarea]:mt-2 [&>input,&>textarea]:py-4 [&>input,&>textarea]:px-3 [&>input,&>textarea]:rounded-[10px] w-full flex-1 p-10 rounded-[10px] justify-top h-fit">
+          <form className="flex flex-col bg-[#CFE7F7] [&>input,&>textarea]:bg-white [&>input,&>textarea]:mb-5 [&>input,&>textarea]:mt-2 [&>input,&>textarea]:py-4 [&>input,&>textarea]:px-3 [&>input,&>textarea]:rounded-[10px] w-full flex-1 p-10 rounded-[10px] justify-top justify-between">
             <label htmlFor="full-name"><b>Full Name <span className="text-red-400">*</span></b></label>
             <input type="text" id="full-name" name="full-name" placeholder="John Doe" required />
             <label htmlFor="email"><b>Email <span className="text-red-400">*</span></b></label>
