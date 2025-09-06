@@ -16,16 +16,24 @@ export default function GoogleReviews() {
 
   const images = {
     vaughan: [
+      "/images/about-banner.avif",
       "/images/home-tour-1.jpg",
-      "/images/home-tour-2.jpg",
       "/images/home-tour-3.jpg",
-      "/images/home-tour-1.jpg"
+      "/images/home-services-background.jpg",
+      "/images/clinic-vaughan-7.jpg",
+      "/images/team-banner.jpg",
+      "/images/clinic-vaughan-2.jpg",
+      "/images/clinic-vaughan-5.jpg",
     ],
     brampton: [
-      "/images/home-tour-3.jpg",
-      "/images/home-tour-2.jpg",
-      "/images/home-tour-1.jpg",
-      "/images/home-tour-3.jpg"
+      "/images/clinic-brampton-1.jpg",
+      "/images/clinic-brampton-2.jpg",
+      "/images/clinic-brampton-3.jpg",
+      "/images/clinic-brampton-7.jpeg",
+      "/images/clinic-brampton-11.jpg",
+      "/images/clinic-brampton-17.jpg",
+      "/images/clinic-brampton-4.jpeg",
+      "/images/clinic-brampton-9.jpg",
     ],
   };
 
