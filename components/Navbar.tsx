@@ -4,8 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import ServicesMenu from "./ServicesMenu";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [showMenu, setShowMenu] = useState(false);
   const pathname = usePathname();
 
   return (
@@ -51,6 +53,21 @@ export default function Navbar() {
           }><Link href="/contact">Contact</Link></li>
         </ul>
       </nav>
+      <Image
+        className="mr-[-5] xl:hidden block"
+        onClick={() => {
+          setShowMenu(!showMenu);
+        }}
+        src={"/icons/hamburger-menu.svg"}
+        width={40}
+        height={0}
+        alt="menu"
+      />
+      {showMenu && (
+        <div className="bg-white">
+
+        </div>
+      )}
     </div>
   );
 }
