@@ -65,10 +65,10 @@ export default function GoogleReviews() {
         }}
         spaceBetween={20}
         rewind
-        // autoplay={{
-        //   delay: 2500,
-        //   disableOnInteraction: true,
-        // }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: true,
+        }}
         pagination={{
           clickable: true,
         }}

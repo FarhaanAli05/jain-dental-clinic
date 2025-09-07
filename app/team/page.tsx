@@ -2,7 +2,34 @@ import CallToAction from "@/components/CallToAction";
 import Container from "@/components/Container";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Our Team",
+  description: "Meet the experienced and compassionate dental professionals at Jain Dental Clinic in Brampton and Vaughan. Dedicated to your comfort, health, and smile.",
+  openGraph: {
+    type: "website",
+    url: "https://jaindentalclinic.ca/team",
+    title: "Our Team | Jain Dental Clinic",
+    description: "Learn about the skilled dentists and caring team at Jain Dental Clinic in Brampton and Vaughan. Providing family, cosmetic, and advanced dental care.",
+    siteName: "Jain Dental Clinic",
+    images: [
+      {
+        url: "https://jaindentalclinic.ca/images/team-banner-og.jpg",
+        width: 1280,
+        height: 672,
+        alt: "Jain Dental Clinic Front Desk"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Team | Jain Dental Clinic",
+    description: "Meet the skilled and compassionate dental professionals at Jain Dental Clinic in Brampton and Vaughan.",
+    images: ["https://jaindentalclinic.ca/images/team-banner-og.jpg"]
+  }
+};
 
 export default function Team() {
   return (

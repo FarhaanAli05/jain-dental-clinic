@@ -9,14 +9,12 @@ import 'swiper/css/pagination';
 import { useState } from "react";
 import Image from "next/image";
 
-// import './GoogleReviews.css'
-
 export default function GoogleReviews() {
   const [city, setCity] = useState<"brampton" | "vaughan">("vaughan");
 
   const images = {
     vaughan: [
-      "/images/about-banner.avif",
+      "/images/about-banner.webp",
       "/images/home-tour-1.jpg",
       "/images/home-tour-3.jpg",
       "/images/home-services-background.jpg",
@@ -71,7 +69,7 @@ export default function GoogleReviews() {
         rewind
         autoplay={{
           delay: 3000,
-          disableOnInteraction: false,
+          disableOnInteraction: true,
         }}
         pagination={{
           clickable: true,

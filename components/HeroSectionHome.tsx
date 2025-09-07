@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Container from "./Container";
 
-const images = ["/images/home-banner.webp", "/images/home-welcome.jpg", "/images/preventive-dentistry-banner.jpeg"];
+const images = ["/images/home-banner.webp", "/images/home-welcome.jpg", "/images/preventive-care-banner.jpeg"];
 
 export default function HeroSectionHome() {
   const [current, setCurrent] = useState(0);
@@ -34,7 +34,7 @@ export default function HeroSectionHome() {
         <div className="relative z-2 text-[white] flex h-full flex-col pt-30 pb-40 lg:pt-40 lg:pb-50 xl:pt-40 xl:pb-50">
           <div className="h-full flex flex-col justify-center [&>div]:flex [&>div]:items-center [&>div]:gap-x-3 [&>div]:mt-4">
             <h2 className="mb-5 !text-[26px]">Your Smile, Our Care</h2>
-            <h1 className="md:!text-[50px] max-w-150 whitespace-normal break-words">Personalized, Professional Care By <i>Exprienced Dentists</i></h1>
+            <h1 className="md:!text-[50px] max-w-150 whitespace-normal break-words">Personalized, Professional Care By <i>Experienced Dentists</i></h1>
             <p className="mt-6.5 mb-1.5">Call to book an appointment:</p>
             <div>
               <Image

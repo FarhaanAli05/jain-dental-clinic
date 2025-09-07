@@ -2,7 +2,31 @@ import CallToAction from "@/components/CallToAction";
 import Container from "@/components/Container";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Cosmetic Dentistry",
+  description: "Enhance your smile with teeth whitening, veneers, and full smile makeovers at Jain Dental Clinic.",
+  openGraph: {
+    title: "Cosmetic Dentistry | Jain Dental Clinic",
+    description: "Boost your confidence with professional teeth whitening, veneers, and smile makeovers in Brampton and Vaughan.",
+    images: [
+      {
+        url: "https://jaindental.ca/images/cosmetic-dentistry-banner-og.jpg",
+        width: 1280,
+        height: 672,
+        alt: "Cosmetic dentistry treatment at Jain Dental Clinic"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cosmetic Dentistry | Jain Dental Clinic",
+    description: "Personalized cosmetic dental care including whitening, veneers, and full smile transformations.",
+    images: ["https://jaindental.ca/images/cosmetic-dentistry-banner-og.jpg"]
+  }
+};
 
 export default function CosmeticDentistry() {
   return (

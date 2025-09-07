@@ -50,7 +50,7 @@ export default function Footer({ current }: { current: string }) {
               <p><b>Brampton:</b></p>
               <p><a href="mailto:info@jaindentalclinic.ca">info@jaindentalclinic.ca</a></p>
               <div className="mb-7">
-                <a href="https://www.facebook.com/dentalclinicbrampton/">
+                <a href="https://www.facebook.com/dentalclinicbrampton/" target="_blank">
                   <Image
                     src={"/icons/facebook.svg"}
                     width={26.67}
@@ -59,7 +59,7 @@ export default function Footer({ current }: { current: string }) {
                     aria-hidden="true"
                   />
                 </a>
-                <a href="https://www.instagram.com/jaindentalbrampton/">
+                <a href="https://www.instagram.com/jaindentalbrampton/" target="_blank">
                   <Image
                     src={"/icons/instagram.svg"}
                     width={27}
@@ -72,7 +72,7 @@ export default function Footer({ current }: { current: string }) {
               <p><b>Vaughan:</b></p>
               <p><a href="mailto:reception@jaindentalclinic.ca">reception@jaindentalclinic.ca</a></p>
               <div>
-                <a href="https://www.facebook.com/dentistvaughan/">
+                <a href="https://www.facebook.com/dentistvaughan/" target="_blank">
                   <Image
                     src={"/icons/facebook.svg"}
                     width={26.67}
@@ -81,7 +81,7 @@ export default function Footer({ current }: { current: string }) {
                     aria-hidden="true"
                   />
                 </a>
-                <a href="https://www.instagram.com/jaindental.centre/">
+                <a href="https://www.instagram.com/jaindental.centre/" target="_blank">
                   <Image
                     src={"/icons/instagram.svg"}
                     width={27}

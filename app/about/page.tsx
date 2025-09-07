@@ -2,21 +2,48 @@ import CallToAction from "@/components/CallToAction";
 import Container from "@/components/Container";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description: "Learn more about Jain Dental Clinic and our commitment to caring for smiles.",
+  openGraph: {
+    type: "website",
+    url: "https://jaindentalclinic.ca/about",
+    title: "About Us | Jain Dental Clinic",
+    description: "Learn more about Jain Dental Clinic and our commitment to caring for smiles.",
+    siteName: "Jain Dental Clinic",
+    images: [
+      {
+        url: "https://jaindental.ca/images/about-banner-og.jpg",
+        width: 1280,
+        height: 673,
+        alt: "About Jain Dental Clinic"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us | Jain Dental Clinic",
+    description: "Learn more about Jain Dental Clinic and our commitment to caring for smiles.",
+    images: ["https://jaindental.ca/images/about-banner-og.jpg"]
+  }
+};
 
 export default function About() {
   return (
     <>
       <HeroSection
         subtitle='About Jain Dental Clinic'
-        backgroundImage='/images/about-banner.avif'
+        backgroundImage='/images/about-banner.webp'
       >
         Caring for <i>Smiles</i>, One Patient At A Time
       </HeroSection>
       <Container className="mb-20">
         <div className="flex flex-col xl:flex-row gap-x-13 mt-20">
           <Image
-            src={"/images/about-banner.avif"}
+            src={"/images/about-banner.webp"}
             className="rounded-[10px] object-cover order-1 h-100 w-full mt-8 xl:ml-5 xl:w-120"
             width={490}
             height={0}
@@ -37,8 +64,8 @@ export default function About() {
         </div>
       </Container>
       {/* <CallToAction>Your Healthiest Smile Starts Here.</CallToAction> */}
-      <CallToAction/>
-      <Footer current="about"/>
+      <CallToAction />
+      <Footer current="about" />
     </>
   );
 }

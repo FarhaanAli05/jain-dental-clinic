@@ -2,7 +2,31 @@ import CallToAction from "@/components/CallToAction";
 import Container from "@/components/Container";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Root Canal Treatment",
+  description: "Save your natural tooth and relieve discomfort with gentle, effective root canal therapy at Jain Dental Clinic.",
+  openGraph: {
+    title: "Root Canal Treatment | Jain Dental Clinic",
+    description: "Modern root canal therapy to relieve pain and restore your smile in Brampton and Vaughan.",
+    images: [
+      {
+        url: "https://jaindental.ca/images/root-canal-treatment-banner-og.jpg",
+        width: 1280,
+        height: 672,
+        alt: "Root canal treatment at Jain Dental Clinic"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Root Canal Treatment | Jain Dental Clinic",
+    description: "Gentle, effective root canal treatment using modern techniques for lasting relief.",
+    images: ["https://jaindental.ca/images/root-canal-treatment-banner-og.jpg"]
+  }
+};
 
 export default function RootCanalTreatment() {
   return (
@@ -29,7 +53,7 @@ export default function RootCanalTreatment() {
             <h1 className="ml-2">Expert Root Canal Therapy For Lasting Comfort</h1>
             {/* <div className="bg-[#CAFAFF] w-123 h-7 mt-[-33]" /> */}
             <p className="mt-10">
-              A root canal doesn’t have to be intimidating—it’s a safe and effective way to save your natural tooth while eliminating infection and pain. At Jain Dental Clinic, our experienced team uses gentle techniques and modern technology to make the procedure as comfortable as possible.<br/><br/>
+              A root canal doesn’t have to be intimidating—it’s a safe and effective way to save your natural tooth while eliminating infection and pain. At Jain Dental Clinic, our experienced team uses gentle techniques and modern technology to make the procedure as comfortable as possible.<br /><br />
 
               By removing infected tissue and sealing the tooth, root canal treatment helps preserve your natural bite, prevents further complications, and restores your smile’s strength and function. Whether you’re experiencing tooth pain, sensitivity, or swelling, our priority is to get you relief and protect your long-term oral health.
             </p>
@@ -37,7 +61,7 @@ export default function RootCanalTreatment() {
         </div>
       </Container>
       {/* <CallToAction>Don’t Let Tooth Pain Hold You Back — Call Us Today To Schedule Your Root Canal Appointment.</CallToAction> */}
-      <CallToAction/>
+      <CallToAction />
       <Footer current="root-canal-treatment" />
     </>
   );

@@ -2,7 +2,31 @@ import CallToAction from "@/components/CallToAction";
 import Container from "@/components/Container";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Pediatric Dentistry",
+  description: "Gentle, compassionate dental care for children in a kid-friendly environment at Jain Dental Clinic.",
+  openGraph: {
+    title: "Pediatric Dentistry | Jain Dental Clinic",
+    description: "Specialized dental care for children — creating positive dental experiences in Brampton and Vaughan.",
+    images: [
+      {
+        url: "https://jaindental.ca/images/pediatric-dentistry-banner-og.jpg",
+        width: 1280,
+        height: 672,
+        alt: "Pediatric dental care at Jain Dental Clinic"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pediatric Dentistry | Jain Dental Clinic",
+    description: "Trusted children's dentistry with gentle, caring treatment for lifelong oral health.",
+    images: ["https://jaindental.ca/images/pediatric-dentistry-banner-og.jpg"]
+  }
+};
 
 export default function PediatricDentistry() {
   return (

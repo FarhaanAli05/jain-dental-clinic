@@ -2,14 +2,38 @@ import CallToAction from "@/components/CallToAction";
 import Container from "@/components/Container";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Preventive Care",
+  description: "Protect your smile with routine checkups, cleanings, and preventive treatments at Jain Dental Clinic in Brampton and Vaughan.",
+  openGraph: {
+    title: "Preventive Care | Jain Dental Clinic",
+    description: "Stop dental issues before they start with routine checkups, cleanings, and preventive treatments in Brampton and Vaughan.",
+    images: [
+      {
+        url: "https://jaindental.ca/images/preventive-care-banner-og.jpg",
+        width: 1106,
+        height: 580,
+        alt: "Preventive dental care at Jain Dental Clinic"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Preventive Care | Jain Dental Clinic",
+    description: "Comprehensive preventive dental services to keep your smile healthy and bright.",
+    images: ["https://jaindental.ca/images/preventive-care-banner-og.jpg"]
+  }
+};
 
 export default function PreventiveCare() {
   return (
     <>
       <HeroSection
         subtitle="Preventive Care"
-        backgroundImage='/images/preventive-dentistry-banner.jpeg'
+        backgroundImage='/images/preventive-care-banner.jpeg'
         className="!bg-[position:50%_45%]"
       >
         Proactive Dental Care for A Lifetime Of Healthy Smiles

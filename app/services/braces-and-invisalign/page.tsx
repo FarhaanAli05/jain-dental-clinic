@@ -2,7 +2,31 @@ import CallToAction from "@/components/CallToAction";
 import Container from "@/components/Container";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Braces & Invisalign",
+  description: "Straighten your teeth with traditional braces or discreet Invisalign aligners at Jain Dental Clinic.",
+  openGraph: {
+    title: "Braces & Invisalign | Jain Dental Clinic",
+    description: "Orthodontic solutions for all ages — from braces to Invisalign — available in Brampton and Vaughan.",
+    images: [
+      {
+        url: "https://jaindental.ca/images/braces-and-invisalign-banner-og.jpg",
+        width: 1280,
+        height: 672,
+        alt: "Braces and Invisalign at Jain Dental Clinic"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Braces & Invisalign | Jain Dental Clinic",
+    description: "Achieve a straighter, healthier smile with braces or Invisalign aligners.",
+    images: ["https://jaindental.ca/images/braces-and-invisalign-banner-og.jpg"]
+  }
+};
 
 export default function BracesAndInvisalign() {
   return (

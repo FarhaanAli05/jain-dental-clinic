@@ -39,7 +39,7 @@ export default function Navbar() {
             </ul>
           </nav>
           <Image
-            className="mr-[-5] xl:hidden block"
+            className="mr-[-5] xl:hidden block cursor-pointer"
             onClick={() => {
               setShowMenu(!showMenu);
             }}
