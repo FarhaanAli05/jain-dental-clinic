@@ -8,7 +8,8 @@ export default function RootCanalTreatment() {
   return (
     <>
       <HeroSection
-        backgroundImage={'/images/root-canal-treatment-banner.avif'}
+        subtitle="Root Canal Treatment"
+        backgroundImage='/images/root-canal-treatment-banner.avif'
         className="!bg-[position:50%_45%]"
       >
         Relieve Pain and Restore Your Natural Smile

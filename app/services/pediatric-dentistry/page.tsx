@@ -8,7 +8,8 @@ export default function PediatricDentistry() {
   return (
     <>
       <HeroSection
-        backgroundImage={'/images/pediatric-dentistry-banner.avif'}
+        subtitle="Pediatric Dentistry"
+        backgroundImage='/images/pediatric-dentistry-banner.avif'
         className="!bg-[position:50%_45%]"
       >
         Gentle Care for Growing Smiles

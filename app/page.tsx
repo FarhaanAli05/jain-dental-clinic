@@ -97,7 +97,7 @@ export default function Home() {
           </div>
         </div>
       </Container>
-      <div className="relative bg-[url(/images/home-services-background.jpg)] bg-no-repeat bg-cover bg-center h-full mt-35">
+      <div className="relative bg-[url(/images/home-services-background.jpg)] bg-no-repeat bg-cover bg-center h-full mt-35 bg-fixed">
         <div className="absolute bg-gradient-to-b from-[#00162B] to-[#2C3E50] bg-no-repeat bg-center bg-cover h-full w-full opacity-60 z-10" />
         <Container className="py-2">
           <div className="relative z-20 text-center py-15">
@@ -213,39 +213,7 @@ export default function Home() {
           </div>
           <h1 className="mt-6">See Why Patients Choose Us</h1>
           <p className="mt-4">See what our patients are saying about their experience with us.</p>
-          {/* <nav className="mt-7">
-            <ul className="[&>li]:px-6 [&>li]:py-2.5 [&>li]:text-center [&>li]:inline-block [&>li]:rounded-full">
-              <li className="selected">Brampton</li>
-              <li>Vaughan</li>
-            </ul>
-          </nav> */}
           <GoogleReviews />
-          {/* <div className="flex text-left [&>p:nth-child(even)]:bg-[#D5ECF9] [&>p:nth-child(odd)]:bg-white [&>p]:p-10 gap-x-6 [&>p]:rounded-[10px] mt-8">
-            <p>
-              “Dr. Jain has been our family dentist since I could renember and it has always been a pleasure to go to him. The entire team in the clinic is so friendly and nice. They took care of my 5 month baby while I got my cleaning done. The hygenist was also super helpful asking if I was comfortable and doing a thorough job. Had an amazing experience. Thank you Dr. Jain & team!”<br /><br />
-
-              - Haiqa S.
-            </p>
-            <p>
-              “Dr. Jain has been our family dentist since I could renember and it has always been a pleasure to go to him. The entire team in the clinic is so friendly and nice. They took care of my 5 month baby while I got my cleaning done. The hygenist was also super helpful asking if I was comfortable and doing a thorough job. Had an amazing experience. Thank you Dr. Jain & team!”<br /><br />
-
-              - Haiqa S.
-            </p>
-            <p>
-              “Dr. Jain has been our family dentist since I could renember and it has always been a pleasure to go to him. The entire team in the clinic is so friendly and nice. They took care of my 5 month baby while I got my cleaning done. The hygenist was also super helpful asking if I was comfortable and doing a thorough job. Had an amazing experience. Thank you Dr. Jain & team!”<br /><br />
-
-              - Haiqa S.
-            </p>
-            <div>
-              <div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-          </div> */}
         </div>
         <div className="mt-30 text-center">
           <div className="flex justify-center">

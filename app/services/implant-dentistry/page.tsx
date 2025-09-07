@@ -8,7 +8,8 @@ export default function ImplantDentistry() {
   return (
     <>
       <HeroSection
-        backgroundImage={'/images/implant-dentistry-banner.avif'}
+        subtitle="Implant Dentistry"
+        backgroundImage='/images/implant-dentistry-banner.avif'
         className="!bg-[position:50%_45%]"
       >
         Lasting Solutions For Missing Teeth

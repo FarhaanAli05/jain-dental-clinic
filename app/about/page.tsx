@@ -8,7 +8,8 @@ export default function About() {
   return (
     <>
       <HeroSection
-        backgroundImage={'/images/about-banner.avif'}
+        subtitle='About Jain Dental Clinic'
+        backgroundImage='/images/about-banner.avif'
       >
         Caring for <i>Smiles</i>, One Patient At A Time
       </HeroSection>
@@ -25,7 +26,6 @@ export default function About() {
           <div>
             <h3 className="px-8 py-2.5 bg-[#EBFDFF] text-center inline-block rounded-full mb-3">About Us</h3>
             <h1 className="ml-2">Creating Healthy Smiles With A <i>Personal Touch</i></h1>
-            {/* <div className="bg-[#CAFAFF] w-123 h-7 mt-[-33]" /> */}
             <p className="mt-10">
               At Jain Dental Clinic, we understand that visiting the dentist is about more than just treatment — it's about trust, comfort, and building a lasting relationship with your dental team. Our mission is to provide personalized, professional care in a welcoming environment, where every patient feels valued and heard.<br /><br />
 

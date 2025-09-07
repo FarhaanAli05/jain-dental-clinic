@@ -8,6 +8,7 @@ export default function Services() {
   return (
     <>
       <HeroSection
+        subtitle="Our Dental Services"
         backgroundImage="/images/home-services-background.jpg"
       >
         Personalized Solutions For <i>Every Smile</i>

@@ -30,7 +30,7 @@ export default function Footer({ current }: { current: string }) {
               <Link href="/services" className={current === "services" ? "font-bold" : ""}>Services</Link><br />
               <Link href="/clinic" className={current === "clinic" ? "font-bold" : ""}>Our Clinics</Link><br />
               <Link href="/team" className={current === "team" ? "font-bold" : ""}>Team</Link><br />
-              <Link href="/contact" className={current === "contact" ? "font-bold" : ""}>Contact</Link>
+              {/* <Link href="/contact" className={current === "contact" ? "font-bold" : ""}>Contact</Link> */}
             </p>
           </div>
           <div>

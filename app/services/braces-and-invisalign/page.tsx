@@ -8,7 +8,8 @@ export default function BracesAndInvisalign() {
   return (
     <>
       <HeroSection
-        backgroundImage={'/images/braces-and-invisalign-banner.webp'}
+        subtitle="Braces & Invisalign"
+        backgroundImage='/images/braces-and-invisalign-banner.webp'
         className="!bg-[position:50%_45%]"
       >
         Straight Smiles Made Simple

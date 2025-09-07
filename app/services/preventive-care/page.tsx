@@ -8,7 +8,8 @@ export default function PreventiveCare() {
   return (
     <>
       <HeroSection
-        backgroundImage={'/images/preventive-dentistry-banner.jpeg'}
+        subtitle="Preventive Care"
+        backgroundImage='/images/preventive-dentistry-banner.jpeg'
         className="!bg-[position:50%_45%]"
       >
         Proactive Dental Care for A Lifetime Of Healthy Smiles

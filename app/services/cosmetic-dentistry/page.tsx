@@ -8,7 +8,8 @@ export default function CosmeticDentistry() {
   return (
     <>
       <HeroSection
-        backgroundImage={'/images/cosmetic-dentistry-banner.jpg'}
+        subtitle="Cosmetic Dentistry"
+        backgroundImage='/images/cosmetic-dentistry-banner.jpg'
         className="!bg-[position:50%_25%]"
       >
         Transform Your Smile, Transform Your Confidence

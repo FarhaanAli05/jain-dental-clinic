@@ -40,7 +40,7 @@ export default function RootLayout({
       <body
         className={`${sourceSerif4.variable} ${plusJakartaSans.variable} antialiased`}
       >
-        {/* <Navbar /> */}
+        <Navbar />
         <main>{children}</main>
       </body>
     </html>

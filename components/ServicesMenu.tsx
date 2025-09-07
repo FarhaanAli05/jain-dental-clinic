@@ -17,8 +17,8 @@ export default function ServicesMenu() {
         setShowServices(false);
       }}
     >
-      <Link href="/services" className="py-5">
-        Services
+      <Link href="/services" className="py-8">
+        SERVICES
         <Image
           src={"/icons/down-arrow-white.svg"}
           width={10}
@@ -28,13 +28,13 @@ export default function ServicesMenu() {
         />
       </Link>
       {showServices && (
-        <div className="flex flex-col absolute bg-white [&>h3]:text-[#0E2321] p-4 gap-y-2 top-17 rounded-[10px]">
-          <h3><Link href="/services/preventive-care">Preventive Care</Link></h3>
-          <h3><Link href="/services/cosmetic-dentistry">Cosmetic Dentistry</Link></h3>
-          <h3><Link href="/services/root-canal-treatment">Root Canal Treatment</Link></h3>
-          <h3><Link href="/services/braces-and-invisalign">Braces & Invisalign</Link></h3>
-          <h3><Link href="/services/pediatric-dentistry">Pediatric Dentistry</Link></h3>
-          <h3><Link href="/services/implant-dentistry">Implant Dentistry</Link></h3>
+        <div className="flex flex-col absolute bg-[#1C2A3A] [&>h3]:text-white p-6 gap-y-4 border-t-2 top-full border-white [&>h3]:!font-normal">
+          <h3><Link href="/services/preventive-care">PREVENTIVE CARE</Link></h3>
+          <h3><Link href="/services/cosmetic-dentistry">COSMETIC DENTISTRY</Link></h3>
+          <h3><Link href="/services/root-canal-treatment">ROOT CANAL TREATMENT</Link></h3>
+          <h3><Link href="/services/braces-and-invisalign">BRACES & INVISALIGN</Link></h3>
+          <h3><Link href="/services/pediatric-dentistry">PEDIATRIC DENTISTRY</Link></h3>
+          <h3><Link href="/services/implant-dentistry">IMPLANT DENTISTRY</Link></h3>
         </div>
       )}
     </div>

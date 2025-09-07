@@ -8,7 +8,8 @@ export default function Clinic() {
   return (
     <>
       <HeroSection
-        backgroundImage={'/images/clinic-banner.jpg'}
+        subtitle='Tour Our Offices'
+        backgroundImage='/images/clinic-banner.jpg'
       >
         See Where Smiles Begin
       </HeroSection>
