@@ -52,7 +52,7 @@ export default function Home() {
             </h1>
             <p>
               At Jain Dental Clinic, we treat every patient like part of our extended family—offering honest guidance, expert treatment, and a welcoming atmosphere from the moment you walk in.<br /><br />
-              Led by experienced dentists, our team is committed to helping patients of all ages achieve healthy, confident smiles through personalized care and modern techniques. Whether you're here for preventive checkups, cosmetic treatments, or urgent dental needs, your comfort and satisfaction are always our top priorities.<br /><br />
+              Led by experienced dentists, our team is committed to helping patients of all ages achieve healthy, confident smiles through personalized care and modern techniques. Whether you&apos;re here for preventive checkups, cosmetic treatments, or urgent dental needs, your comfort and satisfaction are always our top priorities.<br /><br />
             </p>
             <div>
               <Image
