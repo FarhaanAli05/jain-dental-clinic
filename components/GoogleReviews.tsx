@@ -3,14 +3,11 @@
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { useState } from "react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 export default function GoogleReviews() {
-  const [city, setCity] = useState<"brampton" | "vaughan">("brampton");
-
   const reviews = {
     brampton: [
       "\"Dr. Jain has been our family dentist since I could renember and it has always been a pleasure to go to him. The entire team in the clinic is so friendly and nice. They took care of my 5 month baby while I got my cleaning done. The hygenist was also super helpful asking if I was comfortable and doing a thorough job. Had an amazing experience. Thank you Dr. Jain & team!\"\n\n- Haiqa S.",
@@ -34,55 +31,96 @@ export default function GoogleReviews() {
   };
 
   return (
-    <>
-      <nav className="mt-7">
-        <ul className="[&>li]:px-6 [&>li]:py-2.5 [&>li]:text-center [&>li]:inline-block [&>li]:rounded-full">
-          <li
-            className={city === "brampton" ? "selected" : ""}
-            onClick={() => setCity("brampton")}
+    <div className="mt-7 text-center">
+      <input type="radio" name="city-reviews" id="brampton-reviews" defaultChecked className="hidden" />
+      <input type="radio" name="city-reviews" id="vaughan-reviews" className="hidden" />
+
+      <ul className="inline-flex gap-6 mb-6 cursor-pointer">
+        <li>
+          <label
+            htmlFor="brampton-reviews"
+            className="px-6 py-2.5 rounded-full border border-[#0B7192] text-[#0B7192] cursor-pointer"
           >
             Brampton
-          </li>
-          <li
-            className={city === "vaughan" ? "selected" : ""}
-            onClick={() => setCity("vaughan")}
+          </label>
+        </li>
+        <li>
+          <label
+            htmlFor="vaughan-reviews"
+            className="px-6 py-2.5 rounded-full border border-[#0B7192] text-[#0B7192] cursor-pointer"
           >
             Vaughan
-          </li>
-        </ul>
-      </nav>
-      <Swiper
-        breakpoints={{
-          320: {
-            slidesPerView: 1,
-          },
-          768: {
-            slidesPerView: 2,
-          },
-          1280: {
-            slidesPerView: 3,
-          }
-        }}
-        spaceBetween={20}
-        rewind
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: true,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper [--swiper-pagination-bottom:0px] [--swiper-pagination-color:#0B7192] !pb-10 mb-[-10]"
-      >
-        {reviews[city].map((review, i) => {
-          return (
-            <SwiperSlide key={i} className={`flex text-left ${i % 2 === 0 ? "bg-white" : "bg-[#D5ECF9]"} p-10 gap-x-6 rounded-[10px] mt-8 whitespace-pre-line !h-full`}>
+          </label>
+        </li>
+      </ul>
+
+      <div className="city-swiper brampton-reviews">
+        <Swiper
+          breakpoints={{ 320: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 1280: { slidesPerView: 3 } }}
+          spaceBetween={20}
+          rewind
+          autoplay={{ delay: 3000, disableOnInteraction: true }}
+          pagination={{ clickable: true }}
+          modules={[Autoplay, Pagination, Navigation]}
+          className="mySwiper [--swiper-pagination-bottom:0px] [--swiper-pagination-color:#0B7192] !pb-10 mb-[-10]"
+        >
+          {reviews.brampton.map((review, i) => (
+            <SwiperSlide
+              key={i}
+              className={`flex text-left ${i % 2 === 0 ? "bg-white" : "bg-[#D5ECF9]"} p-10 gap-x-6 rounded-[10px] mt-8 whitespace-pre-line !h-full cursor-grab`}
+            >
               <p>{review}</p>
             </SwiperSlide>
-          );
-        })}
-      </Swiper>
-    </>
+          ))}
+        </Swiper>
+      </div>
+
+      <div className="city-swiper vaughan-reviews">
+        <Swiper
+          breakpoints={{ 320: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 1280: { slidesPerView: 3 } }}
+          spaceBetween={20}
+          rewind
+          autoplay={{ delay: 3000, disableOnInteraction: true }}
+          pagination={{ clickable: true }}
+          modules={[Autoplay, Pagination, Navigation]}
+          className="mySwiper [--swiper-pagination-bottom:0px] [--swiper-pagination-color:#0B7192] !pb-10 mb-[-10]"
+        >
+          {reviews.vaughan.map((review, i) => (
+            <SwiperSlide
+              key={i}
+              className={`flex text-left ${i % 2 === 0 ? "bg-white" : "bg-[#D5ECF9]"} p-10 gap-x-6 rounded-[10px] mt-8 whitespace-pre-line !h-full cursor-grab`}
+            >
+              <p>{review}</p>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+
+      <style jsx>{`
+        .city-swiper {
+          display: none;
+        }
+        #brampton-reviews:checked ~ ul li:nth-child(1) label {
+          background-color: #0B7192;
+          color: white;
+        }
+        #vaughan-reviews:checked ~ ul li:nth-child(2) label {
+          background-color: #0B7192;
+          color: white;
+        }
+        #brampton-reviews:checked ~ .city-swiper.brampton-reviews {
+          display: block;
+        }
+        #brampton-reviews:checked ~ .city-swiper.vaughan-reviews {
+          display: none;
+        }
+        #vaughan-reviews:checked ~ .city-swiper.vaughan-reviews {
+          display: block;
+        }
+        #vaughan-reviews:checked ~ .city-swiper.brampton-reviews {
+          display: none;
+        }
+      `}</style>
+    </div>
   );
 }

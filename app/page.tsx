@@ -219,9 +219,11 @@ export default function Home() {
                 </div>
               </Link>
             </div>
-            <Link href="/services">
-              <div className="flex justify-center border-3 border-[#80C6C6] inline-block px-8 py-2.5 rounded-full mt-15">
-                <button className="flex items-center text-white gap-x-3 cursor-pointer">
+            <div className="flex justify-center">
+              <Link href="/services">
+                <label
+                  className="px-6 py-2.5 rounded-full border-2 border-[#80C6C6] cursor-pointer flex items-center text-white gap-x-3 cursor-pointer mt-15"
+                >
                   Learn More
                   <Image
                     src={"/icons/right-arrow.svg"}
@@ -230,9 +232,9 @@ export default function Home() {
                     alt=""
                     aria-hidden="true"
                   />
-                </button>
-              </div>
-            </Link>
+                </label>
+              </Link>
+            </div>
           </div>
         </Container>
       </div>
