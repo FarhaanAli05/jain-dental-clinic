@@ -5,11 +5,9 @@ import Link from "next/link";
 import ServicesMenu from "./ServicesMenu";
 import { useState } from "react";
 import Container from "./Container";
-import { usePathname } from "next/navigation";
 
-export default function Navbar() {
+export default function Navbar({ activePage }: { activePage: string }) {
   const [showMenu, setShowMenu] = useState(false);
-  const pathname = usePathname();
 
   return (
     <div className="absolute top-0 left-0 w-full z-50">
@@ -31,25 +29,25 @@ export default function Navbar() {
           <nav className="hidden xl:block">
             <ul className="flex gap-x-1.25 [&>li]:px-7 [&>li]:h-[38px] [&>li]:flex [&>li]:justify-center [&>li]:items-center [&>li]:rounded-full mt-2">
               <li className={
-                pathname === "/" ? "current" : ""
+                activePage === "/" ? "current" : ""
               }><Link href="/">Home</Link></li>
               <li className={
-                pathname === "/about" ? "current" : ""
+                activePage === "/about" ? "current" : ""
               }><Link href="/about">About</Link></li>
               <li className={
                 `w-[120px]
-                ${pathname.startsWith("/services")
+                ${activePage === ("/services")
                   ? "current"
                   : ""
                 }`
               }>
-                <ServicesMenu />
+                <ServicesMenu activePage={activePage} />
               </li>
               <li className={
-                pathname === "/clinic" ? "current" : ""
+                activePage === "/clinic" ? "current" : ""
               }><Link href="/clinic">Our Clinics</Link></li>
               <li className={
-                pathname === "/team" ? "current" : ""
+                activePage === "/team" ? "current" : ""
               }><Link href="/team">Team</Link></li>
             </ul>
           </nav>

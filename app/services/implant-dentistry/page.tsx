@@ -1,3 +1,4 @@
+import RootLayout from "@/app/layout";
 import CallToAction from "@/components/CallToAction";
 import Container from "@/components/Container";
 import Footer from "@/components/Footer";
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
 
 export default function ImplantDentistry() {
   return (
-    <>
+    <RootLayout activePage="/services">
       <HeroSection
         subtitle="Implant Dentistry"
         backgroundImage='/images/implant-dentistry-banner.avif'
@@ -63,6 +64,6 @@ export default function ImplantDentistry() {
       {/* <CallToAction>Rebuild Your Smile With Confidence — Call Us Today To Schedule Your Implant Consultation.</CallToAction> */}
       <CallToAction/>
       <Footer current="implant-dentistry" />
-    </>
+    </RootLayout>
   );
 }

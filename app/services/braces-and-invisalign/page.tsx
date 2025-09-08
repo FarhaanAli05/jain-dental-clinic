@@ -1,3 +1,4 @@
+import RootLayout from "@/app/layout";
 import CallToAction from "@/components/CallToAction";
 import Container from "@/components/Container";
 import Footer from "@/components/Footer";
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
 
 export default function BracesAndInvisalign() {
   return (
-    <>
+    <RootLayout activePage="/services">
       <HeroSection
         subtitle="Braces & Invisalign"
         backgroundImage='/images/braces-and-invisalign-banner.webp'
@@ -63,6 +64,6 @@ export default function BracesAndInvisalign() {
       {/* <CallToAction>Start Your Journey To A Straighter Smile — Call Us Today To Book Your Orthodontic Consultation.</CallToAction> */}
       <CallToAction/>
       <Footer current="braces-and-invisalign" />
-    </>
+    </RootLayout>
   );
 }

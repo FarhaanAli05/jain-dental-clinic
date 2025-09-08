@@ -2,12 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-export default function ServicesMenu() {
+export default function ServicesMenu({ activePage }: { activePage: string }) {
   const [showServices, setShowServices] = useState(false);
-  const pathname = usePathname();
 
   return (
     <div
@@ -23,7 +21,7 @@ export default function ServicesMenu() {
         Services
         <Image
           src={
-            pathname === "/services" && !showServices ? "/icons/arrow-down.svg" : pathname === "/services" && showServices ? "/icons/arrow-up.svg" : pathname !== "/services" && !showServices ? "/icons/arrow-down-white.svg" : "/icons/arrow-up-white.svg"
+            activePage === "/services" && !showServices ? "/icons/arrow-down.svg" : activePage === "/services" && showServices ? "/icons/arrow-up.svg" : activePage !== "/services" && !showServices ? "/icons/arrow-down-white.svg" : "/icons/arrow-up-white.svg"
           }
           width={10}
           height={5}

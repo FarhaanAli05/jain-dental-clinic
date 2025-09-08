@@ -73,15 +73,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  activePage
 }: Readonly<{
   children: React.ReactNode;
+  activePage: string;
 }>) {
   return (
     <html lang="en">
       <body
         className={`${sourceSerif4.variable} ${plusJakartaSans.variable} antialiased`}
       >
-        <Navbar />
+        <Navbar activePage={activePage}/>
         <main>{children}</main>
         <script
           type="application/ld+json"

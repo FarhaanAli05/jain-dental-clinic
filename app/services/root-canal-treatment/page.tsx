@@ -1,3 +1,4 @@
+import RootLayout from "@/app/layout";
 import CallToAction from "@/components/CallToAction";
 import Container from "@/components/Container";
 import Footer from "@/components/Footer";
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
 
 export default function RootCanalTreatment() {
   return (
-    <>
+    <RootLayout activePage="/services">
       <HeroSection
         subtitle="Root Canal Treatment"
         backgroundImage='/images/root-canal-treatment-banner.avif'
@@ -63,6 +64,6 @@ export default function RootCanalTreatment() {
       {/* <CallToAction>Don’t Let Tooth Pain Hold You Back — Call Us Today To Schedule Your Root Canal Appointment.</CallToAction> */}
       <CallToAction />
       <Footer current="root-canal-treatment" />
-    </>
+    </RootLayout>
   );
 }

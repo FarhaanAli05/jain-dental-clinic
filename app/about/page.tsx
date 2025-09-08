@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import { Metadata } from "next";
 import Image from "next/image";
+import RootLayout from "../layout";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <>
+    <RootLayout activePage="/about">
       <HeroSection
         subtitle='About Jain Dental Clinic'
         backgroundImage='/images/about-banner.webp'
@@ -66,6 +67,6 @@ export default function About() {
       {/* <CallToAction>Your Healthiest Smile Starts Here.</CallToAction> */}
       <CallToAction />
       <Footer current="about" />
-    </>
+    </RootLayout>
   );
 }
