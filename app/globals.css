@@ -21,7 +21,7 @@ body::after {
   z-index: -1;
 }
 
-p, label, input, textarea, .send-message, li, button, h3 {
+p, label, input, textarea, .send-message {
   font-family: var(--font-plus-jakarta-sans), sans-serif;
   font-weight: 400;
   font-size: 1em;
@@ -75,6 +75,10 @@ h1, h2 {
   padding-top: 20px;
   height: 100%;
 } */
+
+.current {
+  @apply bg-[white] text-[rgb(14,35,33)] rounded-[42px] font-bold;
+}
 
 .selected {
   @apply bg-[#469BD1] text-white font-bold;
