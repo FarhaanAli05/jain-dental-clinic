@@ -22,7 +22,7 @@ export default function HeroSection({
         <div className="relative z-2 text-[white] flex flex h-[115vh] flex-col pt-30 pb-40 lg:pt-40 lg:pb-50 xl:pt-40 xl:pb-50">
           <div className="h-full flex flex-col justify-center [&>div]:flex [&>div]:items-center [&>div]:gap-x-3 [&>div]:mt-4">
             <h2 className="mb-5 !text-[26px]">{subtitle}</h2>
-            <h1 className="md:!text-[50px] max-w-150 whitespace-normal break-words">{children}</h1>
+            <h1 className="md:!text-[50px] max-w-120 whitespace-normal break-words">{children}</h1>
             <p className="mt-6.5 mb-1.5">Call to book an appointment:</p>
             <div>
               <Image
