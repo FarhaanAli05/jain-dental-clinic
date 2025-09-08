@@ -5,7 +5,6 @@ import HeroSection from "@/components/HeroSection";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import RootLayout from "../layout";
 
 export const metadata: Metadata = {
   title: "Our Services",
@@ -35,10 +34,11 @@ export const metadata: Metadata = {
 
 export default function Services() {
   return (
-    <RootLayout activePage="/services">
+    <>
       <HeroSection
         subtitle="Our Dental Services"
         backgroundImage="/images/home-services-background.jpg"
+        page="/services"
       >
         Personalized Solutions For <i>Every Smile</i>
       </HeroSection>
@@ -142,6 +142,6 @@ export default function Services() {
       </Container>
       <CallToAction />
       <Footer current="services" />
-    </RootLayout>
+    </>
   );
 }

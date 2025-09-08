@@ -4,7 +4,6 @@ import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
 import HeroSection from "@/components/HeroSection";
 import { Metadata } from "next";
-import RootLayout from "../layout";
 
 export const metadata: Metadata = {
   title: "Tour Our Offices",
@@ -34,10 +33,11 @@ export const metadata: Metadata = {
 
 export default function Clinic() {
   return (
-    <RootLayout activePage="/clinic">
+    <>
       <HeroSection
         subtitle='Tour Our Offices'
         backgroundImage='/images/clinic-banner-2.jpg'
+        page="/clinic"
         className="!bg-[position:77%_50%]"
       >
         See Where Smiles Begin
@@ -51,6 +51,6 @@ export default function Clinic() {
       </Container>
       <CallToAction />
       <Footer current="clinic" />
-    </RootLayout>
+    </>
   );
 }

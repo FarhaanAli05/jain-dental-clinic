@@ -1,4 +1,3 @@
-import RootLayout from "@/app/layout";
 import CallToAction from "@/components/CallToAction";
 import Container from "@/components/Container";
 import Footer from "@/components/Footer";
@@ -31,10 +30,11 @@ export const metadata: Metadata = {
 
 export default function PreventiveCare() {
   return (
-    <RootLayout activePage="/services">
+    <>
       <HeroSection
         subtitle="Preventive Care"
         backgroundImage='/images/preventive-care-banner.jpeg'
+        page="/services"
         className="!bg-[position:50%_45%]"
       >
         Proactive Dental Care for A Lifetime Of Healthy Smiles
@@ -64,6 +64,6 @@ export default function PreventiveCare() {
       {/* <CallToAction>Protect Your Smile For Years To Come — Call Us Today To Book Your Next Preventive Appointment.</CallToAction> */}
       <CallToAction/>
       <Footer current="preventive-care" />
-    </RootLayout>
+    </>
   );
 }

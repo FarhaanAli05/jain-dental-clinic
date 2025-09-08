@@ -1,4 +1,3 @@
-import RootLayout from "@/app/layout";
 import CallToAction from "@/components/CallToAction";
 import Container from "@/components/Container";
 import Footer from "@/components/Footer";
@@ -31,10 +30,11 @@ export const metadata: Metadata = {
 
 export default function CosmeticDentistry() {
   return (
-    <RootLayout activePage="/services">
+    <>
       <HeroSection
         subtitle="Cosmetic Dentistry"
         backgroundImage='/images/cosmetic-dentistry-banner.jpg'
+        page="/services"
         className="!bg-[position:50%_25%]"
       >
         Transform Your Smile, Transform Your Confidence
@@ -64,6 +64,6 @@ export default function CosmeticDentistry() {
       {/* <CallToAction>Ready To Love Your Smile Again? — Call Us Today To Book Your Cosmetic Dentistry Consultation.</CallToAction> */}
       <CallToAction/>
       <Footer current="cosmetic-dentistry" />
-    </RootLayout>
+    </>
   );
 }

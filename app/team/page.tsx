@@ -4,7 +4,6 @@ import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import { Metadata } from "next";
 import Image from "next/image";
-import RootLayout from "../layout";
 
 export const metadata: Metadata = {
   title: "Our Team",
@@ -34,10 +33,11 @@ export const metadata: Metadata = {
 
 export default function Team() {
   return (
-    <RootLayout activePage="/team">
+    <>
       <HeroSection
         subtitle="Our Caring Professionals"
         backgroundImage='/images/team-banner.jpg'
+        page="/team"
       >
         Dedicated To Your <i>Comfort</i>, <i>Health</i>, and <i>Smile</i>
       </HeroSection>
@@ -87,6 +87,6 @@ export default function Team() {
       </Container>
       <CallToAction />
       <Footer current="team" />
-    </RootLayout>
+    </>
   );
 }

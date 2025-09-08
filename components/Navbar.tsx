@@ -6,7 +6,7 @@ import ServicesMenu from "./ServicesMenu";
 import { useState } from "react";
 import Container from "./Container";
 
-export default function Navbar({ activePage }: { activePage: string }) {
+export default function Navbar({ page }: { page: string }) {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
@@ -29,25 +29,25 @@ export default function Navbar({ activePage }: { activePage: string }) {
           <nav className="hidden xl:block">
             <ul className="flex gap-x-1.25 [&>li]:px-7 [&>li]:h-[38px] [&>li]:flex [&>li]:justify-center [&>li]:items-center [&>li]:rounded-full mt-2">
               <li className={
-                activePage === "/" ? "current" : ""
+                page === "/" ? "current" : ""
               }><Link href="/">Home</Link></li>
               <li className={
-                activePage === "/about" ? "current" : ""
+                page === "/about" ? "current" : ""
               }><Link href="/about">About</Link></li>
               <li className={
                 `w-[120px]
-                ${activePage === ("/services")
+                ${page === ("/services")
                   ? "current"
                   : ""
                 }`
               }>
-                <ServicesMenu activePage={activePage} />
+                <ServicesMenu page={page} />
               </li>
               <li className={
-                activePage === "/clinic" ? "current" : ""
+                page === "/clinic" ? "current" : ""
               }><Link href="/clinic">Our Clinics</Link></li>
               <li className={
-                activePage === "/team" ? "current" : ""
+                page === "/team" ? "current" : ""
               }><Link href="/team">Team</Link></li>
             </ul>
           </nav>

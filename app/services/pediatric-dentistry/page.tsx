@@ -1,4 +1,3 @@
-import RootLayout from "@/app/layout";
 import CallToAction from "@/components/CallToAction";
 import Container from "@/components/Container";
 import Footer from "@/components/Footer";
@@ -31,10 +30,11 @@ export const metadata: Metadata = {
 
 export default function PediatricDentistry() {
   return (
-    <RootLayout activePage="/services">
+    <>
       <HeroSection
         subtitle="Pediatric Dentistry"
         backgroundImage='/images/pediatric-dentistry-banner.avif'
+        page="/services"
         className="!bg-[position:50%_45%]"
       >
         Gentle Care for Growing Smiles
@@ -64,6 +64,6 @@ export default function PediatricDentistry() {
       {/* <CallToAction>Set The Foundation For Lifelong Smiles — Call Us Today To Schedule Your Child’s Next Dental Visit.</CallToAction> */}
       <CallToAction/>
       <Footer current="pediatric-dentistry" />
-    </RootLayout>
+    </>
   );
 }

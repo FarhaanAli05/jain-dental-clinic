@@ -8,7 +8,6 @@ import VisitUs from "@/components/VisitUs";
 import OfficeTour from "@/components/OfficeTour";
 import HeroSectionHome from "@/components/HeroSectionHome";
 import { Metadata } from "next";
-import RootLayout from "./layout";
 
 export const metadata: Metadata = {
   description: "Welcome to Jain Dental Clinic – providing family, cosmetic, and emergency dental care in Brampton and Vaughan.",
@@ -35,7 +34,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <RootLayout activePage="/">
+    <>
       <HeroSectionHome />
       <Container>
         <div className="max-w-302 md:grid lg:grid-cols-[6fr_4fr] grid-cols-1 mt-10 md:mt-25 mx-auto lg:[&>p]:w-[88%] [&>p]:w-full">
@@ -270,6 +269,6 @@ export default function Home() {
       <VisitUs />
       <CallToAction />
       <Footer current="home" />
-    </RootLayout>
+    </>
   );
 }

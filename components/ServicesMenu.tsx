@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function ServicesMenu({ activePage }: { activePage: string }) {
+export default function ServicesMenu({ page }: { page: string }) {
   const [showServices, setShowServices] = useState(false);
 
   return (
@@ -21,7 +21,7 @@ export default function ServicesMenu({ activePage }: { activePage: string }) {
         Services
         <Image
           src={
-            activePage === "/services" && !showServices ? "/icons/arrow-down.svg" : activePage === "/services" && showServices ? "/icons/arrow-up.svg" : activePage !== "/services" && !showServices ? "/icons/arrow-down-white.svg" : "/icons/arrow-up-white.svg"
+            page === "/services" && !showServices ? "/icons/arrow-down.svg" : page === "/services" && showServices ? "/icons/arrow-up.svg" : page !== "/services" && !showServices ? "/icons/arrow-down-white.svg" : "/icons/arrow-up-white.svg"
           }
           width={10}
           height={5}

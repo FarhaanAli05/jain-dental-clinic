@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Source_Serif_4, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 
 const sourceSerif4 = Source_Serif_4({
   variable: "--font-source-serif-4",
@@ -73,17 +72,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  activePage
 }: Readonly<{
   children: React.ReactNode;
-  activePage: string;
 }>) {
   return (
     <html lang="en">
       <body
         className={`${sourceSerif4.variable} ${plusJakartaSans.variable} antialiased`}
       >
-        <Navbar activePage={activePage}/>
         <main>{children}</main>
         <script
           type="application/ld+json"
