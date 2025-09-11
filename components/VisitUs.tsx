@@ -60,7 +60,7 @@ export default function VisitUs() {
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
-              src={`https://www.google.com/maps/embed/v1/place?key=${process.env.GOOGLE_API_KEY}
+              src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_API_KEY}
                       &q=Jain Dental Clinic, Brampton, ON`}>
             </iframe>
           </div>
@@ -117,7 +117,7 @@ export default function VisitUs() {
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
-              src={`https://www.google.com/maps/embed/v1/place?key=${process.env.GOOGLE_API_KEY}
+              src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_API_KEY}
                       &q=Jain Dental Centre, Maple, ON`}>
             </iframe>
           </div>

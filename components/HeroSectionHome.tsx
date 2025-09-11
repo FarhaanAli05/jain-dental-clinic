@@ -1,36 +1,35 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import Container from "./Container";
 import Navbar from "./Navbar";
 
-const images = ["/images/home-banner.webp", "/images/home-welcome.jpg", "/images/preventive-care-banner.jpeg"];
-
 export default function HeroSectionHome() {
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+  const images = [
+    "/images/home-banner.webp",
+    "/images/home-welcome.jpg",
+    "/images/preventive-care-banner.jpeg"
+  ];
 
   return (
     <>
       <Navbar page="/" />
       <div
-        className={`relative w-full h-screen sm:bg-no-repeat sm:bg-center sm:bg-cover`}
+        className={`relative w-full h-screen bg-no-repeat bg-center bg-cover overflow-hidden`}
       >
-        {images.map((img, i) => (
-          <div
-            key={i}
-            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 !bg-[position:50%_45%] ${i === current ? "opacity-100" : "opacity-0"
-              }`}
-            style={{ backgroundImage: `url(${img})` }}
-          />
-        ))}
+        <div className="absolute inset-0 z-0">
+          {images.map((img, i) => (
+            <div
+              key={i}
+              className="absolute inset-0 bg-cover bg-center animate-[fadeSlide_15s_infinite] opacity-0"
+              style={{
+                backgroundImage: `url(${img})`,
+                animationDelay: `${i * 5}s`,
+                animationFillMode: "both",
+              }}
+            />
+          ))}
+        </div>
         <div className="absolute inset-0 bg-gradient-to-b from-[#00162B]/70 to-[#2C5983]/70 z-0" />
         <Container className={"h-full"}>
           <div className="relative z-2 text-[white] flex h-[115vh] flex-col pt-30 pb-40 lg:pt-40 lg:pb-50 xl:pt-40 xl:pb-50">
@@ -61,6 +60,29 @@ export default function HeroSectionHome() {
             </div>
           </div>
         </Container>
+
+        <style jsx>{`
+          .hero-slideshow {
+            position: relative;
+            width: 100%;
+            height: 100%;
+          }
+          .slide {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: 50% 45%;
+            opacity: 0;
+          }
+
+          @keyframes fadeSlide {
+            0% { opacity: 0; }
+            5% { opacity: 1; }
+            30% { opacity: 1; }
+            35% { opacity: 0; }
+            100% { opacity: 0; }
+          }
+        `}</style>
       </div>
     </>
   );

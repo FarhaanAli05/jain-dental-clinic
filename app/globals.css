@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400..700&display=swap');
 @import "tailwindcss";
 
 body {
@@ -21,7 +20,7 @@ body::after {
   z-index: -1;
 }
 
-p, label, input, textarea, .send-message {
+p, label, input, textarea, .send-message, li, h3 {
   font-family: var(--font-plus-jakarta-sans), sans-serif;
   font-weight: 400;
   font-size: 1em;
@@ -29,7 +28,7 @@ p, label, input, textarea, .send-message {
   line-height: 1.5em;
 }
 
-h3, button {
+h3, button, li {
   font-weight: bold;
 }
 
@@ -68,18 +67,14 @@ h1, h2 {
   word-break: break-word;
 }
 
-/* .container {
-  max-width: 1535px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 20px;
-  height: 100%;
-} */
-
 .current {
-  @apply bg-[white] text-[rgb(14,35,33)] rounded-[42px] font-bold;
+  background-color: #ffffff;
+  color: rgb(14, 35, 33);
+  border-radius: 42px;
 }
 
 .selected {
-  @apply bg-[#469BD1] text-white font-bold;
+  background-color: #469BD1;
+  color: #ffffff;
+  font-weight: bold;
 }

@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
 
 const images = {
   vaughan: [
@@ -51,45 +50,69 @@ const images = {
 };
 
 export default function Gallery() {
-  const [city, setCity] = useState<"vaughan" | "brampton">("vaughan");
-
   return (
-    <>
-      <nav className="mt-7">
-        <ul className="[&>li]:px-6 [&>li]:py-2.5 [&>li]:text-center [&>li]:inline-block [&>li]:rounded-full mb-10">
-          <li
-            className={city === "vaughan" ? "selected" : ""}
-            onClick={() => setCity("vaughan")}
+    <div className="mt-7 text-center">
+      <input type="radio" name="city-gallery" id="vaughan-gallery" defaultChecked className="hidden" />
+      <input type="radio" name="city-gallery" id="brampton-gallery" className="hidden" />
+      <ul className="inline-flex gap-6 mb-10 cursor-pointer">
+        <li>
+          <label
+            htmlFor="vaughan-gallery"
+            className="px-6 py-2.5 rounded-full border border-[#0B7192] text-[#0B7192] cursor-pointer"
           >
             Vaughan
-          </li>
-          <li
-            className={city === "brampton" ? "selected" : ""}
-            onClick={() => setCity("brampton")}
+          </label>
+        </li>
+        <li>
+          <label
+            htmlFor="brampton-gallery"
+            className="px-6 py-2.5 rounded-full border border-[#0B7192] text-[#0B7192] cursor-pointer"
           >
             Brampton
-          </li>
-        </ul>
-      </nav>
-      <div className="columns-[368px]">
-        {images[city].map((img, i) => {
-          return (
-            <div
-              className={`relative break-inside-avoid mb-4`}
-              style={{ height: `${img.height}px` }}
-              key={i}
-            >
-              <Image
-                src={img.src}
-                fill
-                className="object-cover rounded-[10px]"
-                alt=""
-                aria-hidden={true}
-              />
-            </div>
-          );
-        })}
+          </label>
+        </li>
+      </ul>
+      <div className="city-gallery vaughan-gallery columns-[368px]">
+        {images.vaughan.map((img, i) => (
+          <div
+            key={i}
+            className="relative break-inside-avoid mb-4"
+            style={{ height: `${img.height}px` }}
+          >
+            <Image src={img.src} fill className="object-cover rounded-[10px]" alt="" aria-hidden="true" />
+          </div>
+        ))}
       </div>
-    </>
+      <div className="city-gallery brampton-gallery columns-[368px]">
+        {images.brampton.map((img, i) => (
+          <div
+            key={i}
+            className="relative break-inside-avoid mb-4"
+            style={{ height: `${img.height}px` }}
+          >
+            <Image src={img.src} fill className="object-cover rounded-[10px]" alt="" aria-hidden="true" />
+          </div>
+        ))}
+      </div>
+      <style jsx>{`
+        .city-gallery {
+          display: none;
+        }
+        #vaughan-gallery:checked ~ ul li:nth-child(1) label {
+          background-color: #0B7192;
+          color: white;
+        }
+        #brampton-gallery:checked ~ ul li:nth-child(2) label {
+          background-color: #0B7192;
+          color: white;
+        }
+        #vaughan-gallery:checked ~ .city-gallery.vaughan-gallery {
+          display: block;
+        }
+        #brampton-gallery:checked ~ .city-gallery.brampton-gallery {
+          display: block;
+        }
+      `}</style>
+    </div>
   );
 }
