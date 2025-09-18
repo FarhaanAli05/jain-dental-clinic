@@ -4,53 +4,132 @@ import Image from "next/image";
 
 export default function Footer({ current }: { current: string }) {
   return (
-    <div className="bg-[#1C2A3A] text-white pt-18">
+    <div className="bg-[#1C2A3A] pt-18 text-white">
       <Container className="flex justify-center">
-        <div className="w-300 grid xl:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-y-10">
+        <div className="grid w-300 grid-cols-1 gap-y-10 sm:grid-cols-2 xl:grid-cols-4">
           <div className="[&>p]:mt-5">
             <h2>Locations</h2>
             <p className="mb-8">
-              3938 Cottrelle Blvd #1<br />
-              Brampton, Ontario<br /><br />
-
+              3938 Cottrelle Blvd #1
+              <br />
+              Brampton, Ontario
+              <br />
+              <br />
               <b>(905) 794-0100</b>
             </p>
             <p>
-              3971 Major MacKenzie Dr W #6<br />
-              Vaughan, Ontario<br /><br />
-
+              3971 Major MacKenzie Dr W #6
+              <br />
+              Vaughan, Ontario
+              <br />
+              <br />
               <b>(905) 832-0050</b>
             </p>
           </div>
           <div>
             <h2 className="mb-5">Navigation</h2>
             <p className="[&>a]:mb-2 [&>a]:inline-block">
-              <Link href="/" className={current === "home" ? "font-bold" : ""}>Home</Link><br />
-              <Link href="/about" className={current === "about" ? "font-bold" : ""}>About</Link><br />
-              <Link href="/services" className={current === "services" ? "font-bold" : ""}>Services</Link><br />
-              <Link href="/clinic" className={current === "clinic" ? "font-bold" : ""}>Our Clinics</Link><br />
-              <Link href="/team" className={current === "team" ? "font-bold" : ""}>Team</Link><br />
+              <Link href="/" className={current === "home" ? "font-bold" : ""}>
+                Home
+              </Link>
+              <br />
+              <Link
+                href="/about"
+                className={current === "about" ? "font-bold" : ""}
+              >
+                About
+              </Link>
+              <br />
+              <Link
+                href="/services"
+                className={current === "services" ? "font-bold" : ""}
+              >
+                Services
+              </Link>
+              <br />
+              <Link
+                href="/clinic"
+                className={current === "clinic" ? "font-bold" : ""}
+              >
+                Our Clinics
+              </Link>
+              <br />
+              <Link
+                href="/team"
+                className={current === "team" ? "font-bold" : ""}
+              >
+                Team
+              </Link>
+              <br />
               {/* <Link href="/contact" className={current === "contact" ? "font-bold" : ""}>Contact</Link> */}
             </p>
           </div>
           <div>
             <h2 className="mb-5">Services</h2>
             <p className="[&>a]:mb-2 [&>a]:inline-block">
-              <Link href="/services/preventive-care" className={current === "preventive-care" ? "font-bold" : ""}>Preventive Care</Link><br />
-              <Link href="/services/cosmetic-dentistry" className={current === "cosmetic-dentistry" ? "font-bold" : ""}>Cosmetic Dentistry</Link><br />
-              <Link href="/services/root-canal-treatment" className={current === "root-canal-treatment" ? "font-bold" : ""}>Root Canal Treatment</Link><br />
-              <Link href="/services/braces-and-invisalign" className={current === "braces-and-invisalign" ? "font-bold" : ""}>Braces & Invisalign</Link><br />
-              <Link href="/services/pediatric-dentistry" className={current === "pediatric-dentistry" ? "font-bold" : ""}>Pediatric Dentistry</Link><br />
-              <Link href="/services/implant-dentistry" className={current === "implant-dentistry" ? "font-bold" : ""}>Implant Dentistry</Link>
+              <Link
+                href="/services/preventive-care"
+                className={current === "preventive-care" ? "font-bold" : ""}
+              >
+                Preventive Care
+              </Link>
+              <br />
+              <Link
+                href="/services/cosmetic-dentistry"
+                className={current === "cosmetic-dentistry" ? "font-bold" : ""}
+              >
+                Cosmetic Dentistry
+              </Link>
+              <br />
+              <Link
+                href="/services/root-canal-treatment"
+                className={
+                  current === "root-canal-treatment" ? "font-bold" : ""
+                }
+              >
+                Root Canal Treatment
+              </Link>
+              <br />
+              <Link
+                href="/services/braces-and-invisalign"
+                className={
+                  current === "braces-and-invisalign" ? "font-bold" : ""
+                }
+              >
+                Braces & Invisalign
+              </Link>
+              <br />
+              <Link
+                href="/services/pediatric-dentistry"
+                className={current === "pediatric-dentistry" ? "font-bold" : ""}
+              >
+                Pediatric Dentistry
+              </Link>
+              <br />
+              <Link
+                href="/services/implant-dentistry"
+                className={current === "implant-dentistry" ? "font-bold" : ""}
+              >
+                Implant Dentistry
+              </Link>
             </p>
           </div>
           <div>
-            <div className="[&>div]:flex [&>div]:gap-x-2 mb-10 [&>p]:mb-2">
+            <div className="mb-10 [&>div]:flex [&>div]:gap-x-2 [&>p]:mb-2">
               <h2 className="mb-5">Contact</h2>
-              <p><b>Brampton:</b></p>
-              <p><a href="mailto:info@jaindentalclinic.ca">info@jaindentalclinic.ca</a></p>
+              <p>
+                <b>Brampton:</b>
+              </p>
+              <p>
+                <a href="mailto:info@jaindentalclinic.ca">
+                  info@jaindentalclinic.ca
+                </a>
+              </p>
               <div className="mb-7">
-                <a href="https://www.facebook.com/dentalclinicbrampton/" target="_blank">
+                <a
+                  href="https://www.facebook.com/dentalclinicbrampton/"
+                  target="_blank"
+                >
                   <Image
                     src={"/icons/facebook.svg"}
                     width={26.67}
@@ -59,7 +138,10 @@ export default function Footer({ current }: { current: string }) {
                     aria-hidden="true"
                   />
                 </a>
-                <a href="https://www.instagram.com/jaindentalbrampton/" target="_blank">
+                <a
+                  href="https://www.instagram.com/jaindentalbrampton/"
+                  target="_blank"
+                >
                   <Image
                     src={"/icons/instagram.svg"}
                     width={27}
@@ -69,10 +151,19 @@ export default function Footer({ current }: { current: string }) {
                   />
                 </a>
               </div>
-              <p><b>Vaughan:</b></p>
-              <p><a href="mailto:reception@jaindentalclinic.ca">reception@jaindentalclinic.ca</a></p>
+              <p>
+                <b>Vaughan:</b>
+              </p>
+              <p>
+                <a href="mailto:reception@jaindentalclinic.ca">
+                  reception@jaindentalclinic.ca
+                </a>
+              </p>
               <div>
-                <a href="https://www.facebook.com/dentistvaughan/" target="_blank">
+                <a
+                  href="https://www.facebook.com/dentistvaughan/"
+                  target="_blank"
+                >
                   <Image
                     src={"/icons/facebook.svg"}
                     width={26.67}
@@ -81,7 +172,10 @@ export default function Footer({ current }: { current: string }) {
                     aria-hidden="true"
                   />
                 </a>
-                <a href="https://www.instagram.com/jaindental.centre/" target="_blank">
+                <a
+                  href="https://www.instagram.com/jaindental.centre/"
+                  target="_blank"
+                >
                   <Image
                     src={"/icons/instagram.svg"}
                     width={27}
@@ -95,7 +189,9 @@ export default function Footer({ current }: { current: string }) {
           </div>
         </div>
       </Container>
-      <p className="text-center py-10 mt-0">&#169; 2025 Jain Dental Clinic | All Rights Reserved</p>
+      <p className="mt-0 py-10 text-center">
+        &#169; 2025 Jain Dental Clinic | All Rights Reserved
+      </p>
     </div>
   );
 }

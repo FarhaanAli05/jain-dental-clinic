@@ -8,28 +8,31 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Our Services",
-  description: "Explore Jain Dental Clinic's full range of dental services in Brampton and Vaughan, including preventive care, cosmetic dentistry, orthodontics, and implants.",
+  description:
+    "Explore Jain Dental Clinic's full range of dental services in Brampton and Vaughan, including preventive care, cosmetic dentistry, orthodontics, and implants.",
   openGraph: {
     type: "website",
     url: "https://jaindentalclinic.ca/services",
     title: "Our Services | Jain Dental Clinic",
-    description: "Discover comprehensive dental care at Jain Dental Clinic. From preventive checkups to cosmetic and implant dentistry, we provide personalized solutions for every smile.",
+    description:
+      "Discover comprehensive dental care at Jain Dental Clinic. From preventive checkups to cosmetic and implant dentistry, we provide personalized solutions for every smile.",
     siteName: "Jain Dental Clinic",
     images: [
       {
         url: "https://jaindental.ca/images/home-services-background-og.jpg",
         width: 1280,
         height: 672,
-        alt: "Jain Dental Clinic Room View"
-      }
-    ]
+        alt: "Jain Dental Clinic Room View",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Our Services | Jain Dental Clinic",
-    description: "Discover comprehensive dental care at Jain Dental Clinic. From preventive checkups to cosmetic and implant dentistry, we provide personalized solutions for every smile.",
-    images: ["https://jaindental.ca/images/home-services-background-og.jpg"]
-  }
+    description:
+      "Discover comprehensive dental care at Jain Dental Clinic. From preventive checkups to cosmetic and implant dentistry, we provide personalized solutions for every smile.",
+    images: ["https://jaindental.ca/images/home-services-background-og.jpg"],
+  },
 };
 
 export default function Services() {
@@ -42,11 +45,13 @@ export default function Services() {
       >
         Personalized Solutions For <i>Every Smile</i>
       </HeroSection>
-      <Container className="py-2 mb-10">
-        <div className="relative z-20 text-center py-15">
-          <h3 className="px-8 py-2.5 bg-[#EBFDFF] text-center inline-block rounded-full">Services</h3>
+      <Container className="mb-10 py-2">
+        <div className="relative z-20 py-15 text-center">
+          <h3 className="inline-block rounded-full bg-[#EBFDFF] px-8 py-2.5 text-center">
+            Services
+          </h3>
           <h1 className="mt-2 mt-6">How We Care For Your Smile</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 text-left mt-10 [&>a>div]:bg-white [&>a>div]:h-full [&>a>div]:p-7 [&>a>div]:rounded-[10px] [&>a>div>h2]:mt-3 [&>a>div>p]:mt-3">
+          <div className="mt-10 grid grid-cols-1 gap-6 text-left md:grid-cols-2 xl:grid-cols-3 [&>a>div]:h-full [&>a>div]:rounded-[10px] [&>a>div]:bg-white [&>a>div]:p-7 [&>a>div>h2]:mt-3 [&>a>div>p]:mt-3">
             <Link href="/services/preventive-care">
               <div>
                 <Image
@@ -58,7 +63,9 @@ export default function Services() {
                 />
                 <h2>Preventive Care</h2>
                 <p>
-                  Protect your smile with routine checkups, professional cleanings, and preventive treatments designed to stop dental issues before they start.
+                  Protect your smile with routine checkups, professional
+                  cleanings, and preventive treatments designed to stop dental
+                  issues before they start.
                 </p>
               </div>
             </Link>
@@ -73,7 +80,8 @@ export default function Services() {
                 />
                 <h2>Cosmetic Dentistry</h2>
                 <p>
-                  Enhance your confidence with personalized cosmetic treatments such as teeth whitening, veneers, and full smile makeovers.
+                  Enhance your confidence with personalized cosmetic treatments
+                  such as teeth whitening, veneers, and full smile makeovers.
                 </p>
               </div>
             </Link>
@@ -88,7 +96,8 @@ export default function Services() {
                 />
                 <h2>Root Canal Treatment</h2>
                 <p>
-                  Save your natural tooth and relieve discomfort with gentle, effective root canal therapy using modern techniques.
+                  Save your natural tooth and relieve discomfort with gentle,
+                  effective root canal therapy using modern techniques.
                 </p>
               </div>
             </Link>
@@ -103,7 +112,9 @@ export default function Services() {
                 />
                 <h2>Braces & Invisalign</h2>
                 <p>
-                  Achieve a straighter, healthier smile with our orthodontic solutions, including traditional braces and discreet Invisalign aligners.
+                  Achieve a straighter, healthier smile with our orthodontic
+                  solutions, including traditional braces and discreet
+                  Invisalign aligners.
                 </p>
               </div>
             </Link>
@@ -118,7 +129,9 @@ export default function Services() {
                 />
                 <h2>Pediatric Dentistry</h2>
                 <p>
-                  Give your child the best start to lifelong oral health with gentle, compassionate dental care in a kid-friendly environment.
+                  Give your child the best start to lifelong oral health with
+                  gentle, compassionate dental care in a kid-friendly
+                  environment.
                 </p>
               </div>
             </Link>
@@ -133,7 +146,8 @@ export default function Services() {
                 />
                 <h2>Implant Dentistry</h2>
                 <p>
-                  Restore missing teeth with durable, natural-looking dental implants that feel and function like your own.
+                  Restore missing teeth with durable, natural-looking dental
+                  implants that feel and function like your own.
                 </p>
               </div>
             </Link>

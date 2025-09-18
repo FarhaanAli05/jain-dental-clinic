@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -34,14 +34,25 @@ export default function OfficeTour() {
 
   return (
     <div className="mt-7 text-center">
-      <input type="radio" name="city-tour" id="vaughan-tour" defaultChecked className="hidden" />
-      <input type="radio" name="city-tour" id="brampton-tour" className="hidden" />
+      <input
+        type="radio"
+        name="city-tour"
+        id="vaughan-tour"
+        defaultChecked
+        className="hidden"
+      />
+      <input
+        type="radio"
+        name="city-tour"
+        id="brampton-tour"
+        className="hidden"
+      />
 
-      <ul className="inline-flex gap-6 mb-6 cursor-pointer">
+      <ul className="mb-6 inline-flex cursor-pointer gap-6">
         <li>
           <label
             htmlFor="vaughan-tour"
-            className="px-6 py-2.5 rounded-full border border-[#0B7192] text-[#0B7192] cursor-pointer"
+            className="cursor-pointer rounded-full border border-[#0B7192] px-6 py-2.5 text-[#0B7192]"
           >
             Vaughan
           </label>
@@ -49,7 +60,7 @@ export default function OfficeTour() {
         <li>
           <label
             htmlFor="brampton-tour"
-            className="px-6 py-2.5 rounded-full border border-[#0B7192] text-[#0B7192] cursor-pointer"
+            className="cursor-pointer rounded-full border border-[#0B7192] px-6 py-2.5 text-[#0B7192]"
           >
             Brampton
           </label>
@@ -68,13 +79,13 @@ export default function OfficeTour() {
           autoplay={{ delay: 3000, disableOnInteraction: true }}
           pagination={{ clickable: true }}
           modules={[Autoplay, Pagination, Navigation]}
-          className="mySwiper [--swiper-pagination-bottom:0px] [--swiper-pagination-color:#0B7192] !pb-10 mb-[-10]"
+          className="mySwiper mb-[-10] !pb-10 [--swiper-pagination-bottom:0px] [--swiper-pagination-color:#0B7192]"
         >
           {images.vaughan.map((src, i) => (
-            <SwiperSlide key={i} className="gap-x-6 mt-8 cursor-grab">
+            <SwiperSlide key={i} className="mt-8 cursor-grab gap-x-6">
               <Image
                 src={src}
-                className="h-92 rounded-[10px] object-cover cursor-grab"
+                className="h-92 cursor-grab rounded-[10px] object-cover"
                 width={488}
                 height={0}
                 alt=""
@@ -97,10 +108,10 @@ export default function OfficeTour() {
           autoplay={{ delay: 3000, disableOnInteraction: true }}
           pagination={{ clickable: true }}
           modules={[Autoplay, Pagination, Navigation]}
-          className="mySwiper [--swiper-pagination-bottom:0px] [--swiper-pagination-color:#0B7192] !pb-10 mb-[-10]"
+          className="mySwiper mb-[-10] !pb-10 [--swiper-pagination-bottom:0px] [--swiper-pagination-color:#0B7192]"
         >
           {images.brampton.map((src, i) => (
-            <SwiperSlide key={i} className="gap-x-6 mt-8 cursor-grab">
+            <SwiperSlide key={i} className="mt-8 cursor-grab gap-x-6">
               <Image
                 src={src}
                 className="h-92 rounded-[10px] object-cover"
@@ -119,11 +130,11 @@ export default function OfficeTour() {
           display: none;
         }
         #vaughan-tour:checked ~ ul li:nth-child(1) label {
-          background-color: #0B7192;
+          background-color: #0b7192;
           color: white;
         }
         #brampton-tour:checked ~ ul li:nth-child(2) label {
-          background-color: #0B7192;
+          background-color: #0b7192;
           color: white;
         }
         #vaughan-tour:checked ~ .city-swiper.vaughan-tour {

@@ -7,27 +7,29 @@ export default function HeroSection({
   page,
   subtitle,
   children,
-  className = ""
+  className = "",
 }: {
   backgroundImage: string;
   page: string;
   subtitle: string;
   children: React.ReactNode;
-  className?: string
+  className?: string;
 }) {
   return (
     <>
       <Navbar page={page} />
       <div
-        className={`relative w-full h-screen bg-no-repeat bg-center bg-cover ${className}`}
+        className={`relative h-screen w-full bg-cover bg-center bg-no-repeat ${className}`}
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#00162B]/70 to-[#2C5983]/70 z-0" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#00162B]/70 to-[#2C5983]/70" />
         <Container className={"h-full"}>
-          <div className="relative z-2 text-[white] flex flex h-[115vh] flex-col pt-30 pb-40 lg:pt-40 lg:pb-50 xl:pt-40 xl:pb-50">
-            <div className="h-full flex flex-col justify-center [&>div]:flex [&>div]:items-center [&>div]:gap-x-3 [&>div]:mt-4">
+          <div className="relative z-2 flex h-[115vh] flex-col pt-30 pb-40 text-[white] lg:pt-40 lg:pb-50 xl:pt-40 xl:pb-50">
+            <div className="flex h-full flex-col justify-center [&>div]:mt-4 [&>div]:flex [&>div]:items-center [&>div]:gap-x-3">
               <h2 className="mb-5 !text-[26px]">{subtitle}</h2>
-              <h1 className="md:!text-[50px] max-w-120 whitespace-normal break-words">{children}</h1>
+              <h1 className="max-w-120 break-words whitespace-normal md:!text-[50px]">
+                {children}
+              </h1>
               <p className="mt-6.5 mb-1.5">Call to book an appointment:</p>
               <div>
                 <Image

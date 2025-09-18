@@ -52,13 +52,24 @@ const images = {
 export default function Gallery() {
   return (
     <div className="mt-7 text-center">
-      <input type="radio" name="city-gallery" id="vaughan-gallery" defaultChecked className="hidden" />
-      <input type="radio" name="city-gallery" id="brampton-gallery" className="hidden" />
-      <ul className="inline-flex gap-6 mb-10 cursor-pointer">
+      <input
+        type="radio"
+        name="city-gallery"
+        id="vaughan-gallery"
+        defaultChecked
+        className="hidden"
+      />
+      <input
+        type="radio"
+        name="city-gallery"
+        id="brampton-gallery"
+        className="hidden"
+      />
+      <ul className="mb-10 inline-flex cursor-pointer gap-6">
         <li>
           <label
             htmlFor="vaughan-gallery"
-            className="px-6 py-2.5 rounded-full border border-[#0B7192] text-[#0B7192] cursor-pointer"
+            className="cursor-pointer rounded-full border border-[#0B7192] px-6 py-2.5 text-[#0B7192]"
           >
             Vaughan
           </label>
@@ -66,7 +77,7 @@ export default function Gallery() {
         <li>
           <label
             htmlFor="brampton-gallery"
-            className="px-6 py-2.5 rounded-full border border-[#0B7192] text-[#0B7192] cursor-pointer"
+            className="cursor-pointer rounded-full border border-[#0B7192] px-6 py-2.5 text-[#0B7192]"
           >
             Brampton
           </label>
@@ -76,10 +87,16 @@ export default function Gallery() {
         {images.vaughan.map((img, i) => (
           <div
             key={i}
-            className="relative break-inside-avoid mb-4"
+            className="relative mb-4 break-inside-avoid"
             style={{ height: `${img.height}px` }}
           >
-            <Image src={img.src} fill className="object-cover rounded-[10px]" alt="" aria-hidden="true" />
+            <Image
+              src={img.src}
+              fill
+              className="rounded-[10px] object-cover"
+              alt=""
+              aria-hidden="true"
+            />
           </div>
         ))}
       </div>
@@ -87,10 +104,16 @@ export default function Gallery() {
         {images.brampton.map((img, i) => (
           <div
             key={i}
-            className="relative break-inside-avoid mb-4"
+            className="relative mb-4 break-inside-avoid"
             style={{ height: `${img.height}px` }}
           >
-            <Image src={img.src} fill className="object-cover rounded-[10px]" alt="" aria-hidden="true" />
+            <Image
+              src={img.src}
+              fill
+              className="rounded-[10px] object-cover"
+              alt=""
+              aria-hidden="true"
+            />
           </div>
         ))}
       </div>
@@ -99,11 +122,11 @@ export default function Gallery() {
           display: none;
         }
         #vaughan-gallery:checked ~ ul li:nth-child(1) label {
-          background-color: #0B7192;
+          background-color: #0b7192;
           color: white;
         }
         #brampton-gallery:checked ~ ul li:nth-child(2) label {
-          background-color: #0B7192;
+          background-color: #0b7192;
           color: white;
         }
         #vaughan-gallery:checked ~ .city-gallery.vaughan-gallery {

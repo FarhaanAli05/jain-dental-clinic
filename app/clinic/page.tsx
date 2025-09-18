@@ -7,45 +7,52 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Tour Our Offices",
-  description: "Explore Jain Dental Clinic's Brampton and Vaughan locations. See our modern facilities and welcoming environment for all your dental needs.",
+  description:
+    "Explore Jain Dental Clinic's Brampton and Vaughan locations. See our modern facilities and welcoming environment for all your dental needs.",
   openGraph: {
     type: "website",
     url: "https://jaindentalclinic.ca/clinic",
     title: "Tour Our Offices | Jain Dental Clinic",
-    description: "Visit our Brampton and Vaughan clinics to see our modern dental facilities and caring team. Book your appointment today.",
+    description:
+      "Visit our Brampton and Vaughan clinics to see our modern dental facilities and caring team. Book your appointment today.",
     siteName: "Jain Dental Clinic",
     images: [
       {
         url: "https://jaindental.ca/images/clinic-banner-2-og.jpg",
         width: 1280,
         height: 672,
-        alt: "Jain Dental Clinic Brampton Interior Tour"
-      }
-    ]
+        alt: "Jain Dental Clinic Brampton Interior Tour",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Tour Our Offices | Jain Dental Clinic",
-    description: "Visit our Brampton and Vaughan clinics to see our modern dental facilities and caring team. Book your appointment today.",
-    images: ["https://jaindental.ca/images/clinic-banner-2-og.jpg"]
-  }
+    description:
+      "Visit our Brampton and Vaughan clinics to see our modern dental facilities and caring team. Book your appointment today.",
+    images: ["https://jaindental.ca/images/clinic-banner-2-og.jpg"],
+  },
 };
 
 export default function Clinic() {
   return (
     <>
       <HeroSection
-        subtitle='Tour Our Offices'
-        backgroundImage='/images/clinic-banner-2.jpg'
+        subtitle="Tour Our Offices"
+        backgroundImage="/images/clinic-banner-2.jpg"
         page="/clinic"
         className="!bg-[position:77%_50%]"
       >
         See Where Smiles Begin
       </HeroSection>
-      <Container className="py-2 mb-10 text-center">
-        <div className="relative z-20 text-center mt-15">
-          <h3 className="px-8 py-2.5 bg-[#EBFDFF] text-center inline-block rounded-full">Our Clinics</h3>
-          <h1 className="mt-6">Where Dentistry Feels Like <i>Home</i></h1>
+      <Container className="mb-10 py-2 text-center">
+        <div className="relative z-20 mt-15 text-center">
+          <h3 className="inline-block rounded-full bg-[#EBFDFF] px-8 py-2.5 text-center">
+            Our Clinics
+          </h3>
+          <h1 className="mt-6">
+            Where Dentistry Feels Like <i>Home</i>
+          </h1>
         </div>
         <Gallery />
       </Container>
